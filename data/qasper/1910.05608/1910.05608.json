@@ -1,0 +1,38 @@
+{
+  "paper_id": "1910.05608",
+  "title": "VAIS Hate Speech Detection System: A Deep Learning based Approach for System Combination",
+  "questions": [
+    {
+      "question": "What is private dashboard?",
+      "free_form_answer": "Private dashboard is leaderboard where competitors can see results after competition is finished - on hidden part of test set (private test set).",
+      "evidence": [
+        "For each model having the best fit on the dev set, we export the probability distribution of classes for each sample in the dev set. In this case, we only use the result of model that has f1_macro score that larger than 0.67. The probability distribution of classes is then used as feature to input into a dense model with only one hidden layer (size 128). The training process of the ensemble model is done on samples of the dev set. The best fit result is 0.7356. The final result submitted in public leaderboard is 0.73019 and in private leaderboard is 0.58455. It is quite different in bad way. That maybe is the result of the model too overfit on train set tuning on public test set."
+      ],
+      "highlighted_evidence": [
+        "The final result submitted in public leaderboard is 0.73019 and in private leaderboard is 0.58455. It is quite different in bad way. That maybe is the result of the model too overfit on train set tuning on public test set."
+      ]
+    },
+    {
+      "question": "What is public dashboard?",
+      "free_form_answer": "Public dashboard where competitors can see their results during competition, on part of the test set (public test set).",
+      "evidence": [
+        "For each model having the best fit on the dev set, we export the probability distribution of classes for each sample in the dev set. In this case, we only use the result of model that has f1_macro score that larger than 0.67. The probability distribution of classes is then used as feature to input into a dense model with only one hidden layer (size 128). The training process of the ensemble model is done on samples of the dev set. The best fit result is 0.7356. The final result submitted in public leaderboard is 0.73019 and in private leaderboard is 0.58455. It is quite different in bad way. That maybe is the result of the model too overfit on train set tuning on public test set."
+      ],
+      "highlighted_evidence": [
+        "The final result submitted in public leaderboard is 0.73019 and in private leaderboard is 0.58455. It is quite different in bad way. That maybe is the result of the model too overfit on train set tuning on public test set."
+      ]
+    },
+    {
+      "question": "What dataset do they use?",
+      "free_form_answer": "They used Wiki Vietnamese language and Vietnamese newspapers to pretrain embeddings and dataset provided in HSD task to train model (details not mentioned in paper).",
+      "evidence": [
+        "The fundamental idea of this system is how to make a system that has the diversity of viewing an input. That because of the variety of the meaning in Vietnamese language especially with the acronym, teen code type. To make this diversity, after cleaning raw text input, we use multiple types of word tokenizers. Each one of these tokenizers, we combine with some types of representation methods, including word to vector methods such as continuous bag of words BIBREF5, pre-trained embedding as fasttext (trained on Wiki Vietnamese language) BIBREF6 and sonvx (trained on Vietnamese newspaper) BIBREF7. Each sentence has a set of words corresponding to a set of word vectors, and that set of word vectors is a representation of a sentence. We also make a sentence embedding by using RoBERTa architecture BIBREF8. CBOW and RoBERTa models trained on text from some resources including VLSP 2016 Sentiment Analysis, VLSP 2018 Sentiment Analysis, VLSP 2019 HSD and text crawled from Facebook. After having sentence representation, we use some classification models to classify input sentences. Those models will be described in detail in the section SECREF13. With the multiply output results, we will use an ensemble method to combine them and output the final result. Ensemble method we use here is Stacking method will be introduced in the section SECREF16.",
+        "The dataset in this HSD task is really imbalance. Clean class dominates with 91.5%, offensive class takes 5% and the rest belongs to hate class with 3.5%. To make model being able to learn with this imbalance data, we inject class weight to the loss function with the corresponding ratio (clean, offensive, hate) is $(0.09, 0.95, 0.96)$. Formular DISPLAY_FORM17 is the loss function apply for all models in our system. $w_i$ is the class weight, $y_i$ is the ground truth and $\\hat{y}_i$ is the output of the model. If the class weight is not set, we find that model cannot adjust parameters. The model tends to output all clean classes."
+      ],
+      "highlighted_evidence": [
+        "Each one of these tokenizers, we combine with some types of representation methods, including word to vector methods such as continuous bag of words BIBREF5, pre-trained embedding as fasttext (trained on Wiki Vietnamese language) BIBREF6 and sonvx (trained on Vietnamese newspaper) BIBREF7",
+        "The dataset in this HSD task is really imbalance. Clean class dominates with 91.5%, offensive class takes 5% and the rest belongs to hate class with 3.5%."
+      ]
+    }
+  ]
+}

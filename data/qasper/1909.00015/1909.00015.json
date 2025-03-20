@@ -1,0 +1,21 @@
+{
+  "paper_id": "1909.00015",
+  "title": "Adaptively Sparse Transformers",
+  "questions": [
+    {
+      "question": "What tasks are used for evaluation?",
+      "free_form_answer": "four machine translation tasks: German -> English, Japanese -> English, Romanian -> English, English -> German",
+      "evidence": [
+        "We apply our adaptively sparse Transformers on four machine translation tasks. For comparison, a natural baseline is the standard Transformer architecture using the softmax transform in its multi-head attention mechanisms. We consider two other model variants in our experiments that make use of different normalizing transformations:",
+        "IWSLT 2017 German $\\rightarrow $ English BIBREF27: 200K sentence pairs.",
+        "KFTT Japanese $\\rightarrow $ English BIBREF28: 300K sentence pairs.",
+        "WMT 2016 Romanian $\\rightarrow $ English BIBREF29: 600K sentence pairs.",
+        "WMT 2014 English $\\rightarrow $ German BIBREF30: 4.5M sentence pairs."
+      ],
+      "highlighted_evidence": [
+        "We apply our adaptively sparse Transformers on four machine translation tasks. ",
+        "IWSLT 2017 German $\\rightarrow $ English BIBREF27: 200K sentence pairs.\n\nKFTT Japanese $\\rightarrow $ English BIBREF28: 300K sentence pairs.\n\nWMT 2016 Romanian $\\rightarrow $ English BIBREF29: 600K sentence pairs.\n\nWMT 2014 English $\\rightarrow $ German BIBREF30: 4.5M sentence pairs."
+      ]
+    }
+  ]
+}

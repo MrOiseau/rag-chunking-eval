@@ -1,0 +1,16 @@
+{
+  "paper_id": "1907.02636",
+  "title": "Collecting Indicators of Compromise from Unstructured Text of Cybersecurity Articles using Neural-Based Sequence Labelling",
+  "questions": [
+    {
+      "question": "What contextual features are used?",
+      "free_form_answer": "The words that can indicate the characteristics of the neighbor words as contextual keywords and generate it from the automatically extracted contextual keywords.",
+      "evidence": [
+        "IOCs in cybersecurity articles are often described in a predictable way: being connected to a set of contextual keywords BIBREF16 , BIBREF1 . For example, a human user can infer that the word \u201cntdll.exe\u201d is the name of a malicious file on the basis of the words \u201cdownload\u201d and \u201ccompromised\u201d from the text shown in Fig. FIGREF1 . By analyzing the whole corpus, it is interesting that malicious file names tends to co-occur with words such as \"download\", \"malware\", \"malicious\", etc. In this work, we consider words that can indicate the characteristics of the neighbor words as contextual keywords and develop an approach to generate features from the automatically extracted contextual keywords."
+      ],
+      "highlighted_evidence": [
+        " In this work, we consider words that can indicate the characteristics of the neighbor words as contextual keywords and develop an approach to generate features from the automatically extracted contextual keywords."
+      ]
+    }
+  ]
+}

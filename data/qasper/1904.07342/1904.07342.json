@@ -1,0 +1,16 @@
+{
+  "paper_id": "1904.07342",
+  "title": "Learning Twitter User Sentiments on Climate Change with Limited Labeled Data",
+  "questions": [
+    {
+      "question": "What methodology is used to compensate for limited labelled data?",
+      "free_form_answer": "Influential tweeters ( who they define as individuals certain to have a classifiable sentiment regarding the topic at hand) is used to label tweets in bulk in the absence of manually-labeled tweets.",
+      "evidence": [
+        "The first data batch consists of tweets relevant to blizzards, hurricanes, and wildfires, under the constraint that they are tweeted by \u201cinfluential\" tweeters, who we define as individuals certain to have a classifiable sentiment regarding the topic at hand. For example, we assume that any tweet composed by Al Gore regarding climate change is a positive sample, whereas any tweet from conspiracy account @ClimateHiJinx is a negative sample. The assumption we make in ensuing methods (confirmed as reasonable in Section SECREF2 ) is that influential tweeters can be used to label tweets in bulk in the absence of manually-labeled tweets. Here, we enforce binary labels for all tweets composed by each of the 133 influential tweeters that we identified on Twitter (87 of whom accept climate change), yielding a total of 16,360 influential tweets."
+      ],
+      "highlighted_evidence": [
+        "The first data batch consists of tweets relevant to blizzards, hurricanes, and wildfires, under the constraint that they are tweeted by \u201cinfluential\" tweeters, who we define as individuals certain to have a classifiable sentiment regarding the topic at hand. For example, we assume that any tweet composed by Al Gore regarding climate change is a positive sample, whereas any tweet from conspiracy account @ClimateHiJinx is a negative sample. The assumption we make in ensuing methods (confirmed as reasonable in Section SECREF2 ) is that influential tweeters can be used to label tweets in bulk in the absence of manually-labeled tweets. "
+      ]
+    }
+  ]
+}

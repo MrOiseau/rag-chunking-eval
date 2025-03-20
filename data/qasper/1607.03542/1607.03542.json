@@ -1,0 +1,29 @@
+{
+  "paper_id": "1607.03542",
+  "title": "Open-Vocabulary Semantic Parsing with both Distributional Statistics and Formal Knowledge",
+  "questions": [
+    {
+      "question": "How big is their dataset?",
+      "free_form_answer": "3 million webpages processed with a CCG parser for training, 220 queries for development, and 307 queries for testing",
+      "evidence": [
+        "Much recent work on semantic parsing has been evaluated using the WebQuestions dataset BIBREF3 . This dataset is not suitable for evaluating our model because it was filtered to only questions that are mappable to Freebase queries. In contrast, our focus is on language that is not directly mappable to Freebase. We thus use the dataset introduced by Krishnamurthy and Mitchell krishnamurthy-2015-semparse-open-vocabulary, which consists of the ClueWeb09 web corpus along with Google's FACC entity linking of that corpus to Freebase BIBREF9 . For training data, 3 million webpages from this corpus were processed with a CCG parser to produce logical forms BIBREF10 . This produced 2.1m predicate instances involving 142k entity pairs and 184k entities. After removing infrequently-seen predicates (seen fewer than 6 times), there were 25k categories and 4.2k relations.",
+        "We also used the test set created by Krishnamurthy and Mitchell, which contains 220 queries generated in the same fashion as the training data from a separate section of ClueWeb. However, as they did not release a development set with their data, we used this set as a development set. For a final evaluation, we generated another, similar test set from a different held out section of ClueWeb, in the same fashion as done by Krishnamurthy and Mitchell. This final test set contains 307 queries."
+      ],
+      "highlighted_evidence": [
+        "For training data, 3 million webpages from this corpus were processed with a CCG parser to produce logical forms BIBREF10 .",
+        "We also used the test set created by Krishnamurthy and Mitchell, which contains 220 queries generated in the same fashion as the training data from a separate section of ClueWeb. However, as they did not release a development set with their data, we used this set as a development set.",
+        "This final test set contains 307 queries."
+      ]
+    },
+    {
+      "question": "What task do they evaluate on?",
+      "free_form_answer": "Fill-in-the-blank natural language questions",
+      "evidence": [
+        "We demonstrate our approach on the task of answering open-domain fill-in-the-blank natural language questions. By giving open vocabulary semantic parsers direct access to KB information, we improve mean average precision on this task by over 120%."
+      ],
+      "highlighted_evidence": [
+        "We demonstrate our approach on the task of answering open-domain fill-in-the-blank natural language questions."
+      ]
+    }
+  ]
+}

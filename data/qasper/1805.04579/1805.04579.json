@@ -1,0 +1,19 @@
+{
+  "paper_id": "1805.04579",
+  "title": "Using Statistical and Semantic Models for Multi-Document Summarization",
+  "questions": [
+    {
+      "question": "How exactly do they weigh between different statistical models?",
+      "free_form_answer": "They define cWeight as weight obtained for each sentence using all the models where the sentences is in the summary of predicted by each model.",
+      "evidence": [
+        "After generating summary from a particular model, our aim is to compute summaries through overlap of different models. Let us have INLINEFORM0 summaries from INLINEFORM1 different models. For INLINEFORM2 summarization model, let the INLINEFORM3 sentences contained be:-",
+        "Given a document INLINEFORM0 we tokenize it into sentences as < INLINEFORM1 >.",
+        "Now for our list of sentences INLINEFORM0 we define cWeight as weight obtained for each sentence using INLINEFORM1 models.",
+        "Here, INLINEFORM0 is a function which returns 1 if sentence is in summary of INLINEFORM1 model, otherwise zero. INLINEFORM2 is weight assigned to each model without training, INLINEFORM3"
+      ],
+      "highlighted_evidence": [
+        "For INLINEFORM2 summarization model, let the INLINEFORM3 sentences contained be:-\n\nINLINEFORM0\n\nNow for our list of sentences INLINEFORM0 we define cWeight as weight obtained for each sentence using INLINEFORM1 models.\n\nINLINEFORM0\n\nHere, INLINEFORM0 is a function which returns 1 if sentence is in summary of INLINEFORM1 model, otherwise zero. INLINEFORM2 is weight assigned to each model without training, INLINEFORM3"
+      ]
+    }
+  ]
+}

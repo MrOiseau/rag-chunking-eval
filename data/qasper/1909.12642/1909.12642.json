@@ -1,0 +1,18 @@
+{
+  "paper_id": "1909.12642",
+  "title": "HateMonitors: Language Agnostic Abuse Detection in Social Media",
+  "questions": [
+    {
+      "question": "What are the languages used to test the model?",
+      "free_form_answer": "Hindi, English and German (German task won)",
+      "evidence": [
+        "The dataset at HASOC 2019 were given in three languages: Hindi, English, and German. Dataset in Hindi and English had three subtasks each, while German had only two subtasks. We participated in all the tasks provided by the organisers and decided to develop a single model that would be language agnostic. We used the same model architecture for all the three languages.",
+        "In the results of subtask A, models are mainly affected by imbalance of the dataset. The training dataset of Hindi dataset was more balanced than English or German dataset. Hence, the results were around 0.78. As the dataset in German language was highly imbalanced, the results drops to 0.62. In subtask B, the highest F1 score reached was by the profane class for each language in table TABREF20. The model got confused between OFFN, HATE and PRFN labels which suggests that these models are not able to capture the context in the sentence. The subtask C was again a case of imbalanced dataset as targeted(TIN) label gets the highest F1 score in table TABREF21."
+      ],
+      "highlighted_evidence": [
+        "The dataset at HASOC 2019 were given in three languages: Hindi, English, and German. Dataset in Hindi and English had three subtasks each, while German had only two subtasks. We participated in all the tasks provided by the organisers and decided to develop a single model that would be language agnostic. We used the same model architecture for all the three languages.",
+        "The training dataset of Hindi dataset was more balanced than English or German dataset. Hence, the results were around 0.78. As the dataset in German language was highly imbalanced, the results drops to 0.62."
+      ]
+    }
+  ]
+}

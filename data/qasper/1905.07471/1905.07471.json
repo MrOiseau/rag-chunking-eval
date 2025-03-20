@@ -1,0 +1,16 @@
+{
+  "paper_id": "1905.07471",
+  "title": "Learning Open Information Extraction of Implicit Relations from Reading Comprehension Datasets",
+  "questions": [
+    {
+      "question": "How much better does this baseline neural model do?",
+      "free_form_answer": "The model outperforms at every point in the\nimplicit-tuples PR curve reaching almost 0.8 in recall",
+      "evidence": [
+        "FLOAT SELECTED: Figure 2: PR curve on our implicit tuples dataset."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: Figure 2: PR curve on our implicit tuples dataset."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "1905.07894",
+  "title": "Abusive Language Detection in Online Conversations by Combining Content-and Graph-based Features",
+  "questions": [
+    {
+      "question": "What is the proposed algorithm or model architecture?",
+      "free_form_answer": "They combine content- and graph-based methods in new ways.",
+      "evidence": [
+        "In this paper, based on the assumption that the interactions between users and the content of the exchanged messages convey different information, we propose a new method to perform abuse detection while leveraging both sources. For this purpose, we take advantage of the content- BIBREF14 and graph-based BIBREF10 methods that we previously developed. We propose three different ways to combine them, and compare their performance on a corpus of chat logs originating from the community of a French multiplayer online game. We then perform a feature study, finding the most informative ones and discussing their role. Our contribution is twofold: the exploration of fusion methods, and more importantly the identification of discriminative features for this problem."
+      ],
+      "highlighted_evidence": [
+        "For this purpose, we take advantage of the content- BIBREF14 and graph-based BIBREF10 methods that we previously developed. We propose three different ways to combine them, and compare their performance on a corpus of chat logs originating from the community of a French multiplayer online game. "
+      ]
+    },
+    {
+      "question": "What fusion methods are applied?",
+      "free_form_answer": "Early fusion, late fusion, hybrid fusion.",
+      "evidence": [
+        "FLOAT SELECTED: FIGURE 1 | Representation of our processing pipeline. Existing methods refers to our previous work described in Papegnies et al. (2017b) (content-based method) and Papegnies et al. (2019) (graph-based method), whereas the contribution presented in this article appears on the right side (fusion strategies). Figure available at 10.6084/m9.figshare.7442273 under CC-BY license."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: FIGURE 1 | Representation of our processing pipeline. Existing methods refers to our previous work described in Papegnies et al. (2017b) (content-based method) and Papegnies et al. (2019) (graph-based method), whereas the contribution presented in this article appears on the right side (fusion strategies). Figure available at 10.6084/m9.figshare.7442273 under CC-BY license."
+      ]
+    },
+    {
+      "question": "What graph-based features are considered?",
+      "free_form_answer": "Coreness Score, PageRank Centrality, Strength Centrality, Vertex Count, Closeness Centrality, Authority Score, Hub Score, Reciprocity, Closeness Centrality",
+      "evidence": [
+        "FLOAT SELECTED: TABLE 2 | Top features obtained for our 5 methods."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: TABLE 2 | Top features obtained for our 5 methods."
+      ]
+    }
+  ]
+}

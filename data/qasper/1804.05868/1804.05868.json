@@ -1,0 +1,16 @@
+{
+  "paper_id": "1804.05868",
+  "title": "Universal Dependency Parsing for Hindi-English Code-switching",
+  "questions": [
+    {
+      "question": "How big is the provided treebank?",
+      "free_form_answer": "1448 sentences more than the dataset from Bhat et al., 2017",
+      "evidence": [
+        "Recently bhat-EtAl:2017:EACLshort provided a CS dataset for the evaluation of their parsing models which they trained on the Hindi and English Universal Dependency (UD) treebanks. We extend this dataset by annotating 1,448 more sentences. Following bhat-EtAl:2017:EACLshort we first sampled CS data from a large set of tweets of Indian language users that we crawled from Twitter using Tweepy\u2013a Twitter API wrapper. We then used a language identification system trained on ICON dataset (see Section \"Preliminary Tasks\" ) to filter Hindi-English CS tweets from the crawled Twitter data. Only those tweets were selected that satisfied a minimum ratio of 30:70(%) code-switching. From this dataset, we manually selected 1,448 tweets for annotation. The selected tweets are thoroughly checked for code-switching ratio. For POS tagging and dependency annotation, we used Version 2 of Universal dependency guidelines BIBREF21 , while language tags are assigned based on the tag set defined in BIBREF22 , BIBREF23 . The dataset was annotated by two expert annotators who have been associated with annotation projects involving syntactic annotations for around 10 years. Nonetheless, we also ensured the quality of the manual annotations by carrying an inter-annotator agreement analysis. We randomly selected a dataset of 150 tweets which were annotated by both annotators for both POS tagging and dependency structures. The inter-annotator agreement has a 96.20% accuracy for POS tagging and a 95.94% UAS and a 92.65% LAS for dependency parsing."
+      ],
+      "highlighted_evidence": [
+        "Recently bhat-EtAl:2017:EACLshort provided a CS dataset for the evaluation of their parsing models which they trained on the Hindi and English Universal Dependency (UD) treebanks. We extend this dataset by annotating 1,448 more sentences."
+      ]
+    }
+  ]
+}

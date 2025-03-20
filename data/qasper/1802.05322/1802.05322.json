@@ -1,0 +1,16 @@
+{
+  "paper_id": "1802.05322",
+  "title": "Classifying movie genres by analyzing text reviews",
+  "questions": [
+    {
+      "question": "what was the baseline?",
+      "free_form_answer": "There is no baseline.",
+      "evidence": [
+        "This paper experimented with two different models and compared them against each other. The inspiration for the first model comes from BIBREF1 in their paper DBLP:journals/corr/cmp-lg-9707002 where they used an MLP for text genre detection. The model used in this paper comes from scikit-learn's neural_network module and is called MLPClassifier. Table TABREF35 shows all parameters that were changed from the default values."
+      ],
+      "highlighted_evidence": [
+        "This paper experimented with two different models and compared them against each other. "
+      ]
+    }
+  ]
+}

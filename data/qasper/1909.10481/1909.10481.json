@@ -1,0 +1,26 @@
+{
+  "paper_id": "1909.10481",
+  "title": "Cross-Lingual Natural Language Generation via Pre-Training",
+  "questions": [
+    {
+      "question": "What is the architecture of the decoder?",
+      "free_form_answer": "6 transformer layers, each layer containing 1024 hidden units, 8 attention heads, and GELU activations.",
+      "evidence": [
+        "We use a pre-trained Xnlg with a 10-layer encoder and a 6-layer decoder. For every Transformer layer, we use 1024 hidden units, 8 attention heads, and GELU activations BIBREF26. In the first pre-training stage, we directly use the 15-language pre-trained XLM BIBREF5 to initialize the parameters of our encoder and decoder. In the second stage, we use Wikipedia as the monolingual data for the DAE objective, and MultiUN BIBREF27 as the parallel data for the XAE objective. The DAE loss is trained with a weight of $0.5$. We train a two-language (English/Chinese) and a three-language (English/French/Chinese) Xnlg for two downstream NLG tasks, respectively. Following BIBREF5, we use the tokenizer provided by BIBREF28 for Chinese, and Moses for other languages, respectively. Then the words in all languages are split with a shared subword vocabulary learned by BPE BIBREF29. We use Adam optimizer with a linear warm-up over the first 4,000 steps and linear decay for later steps, and the learning rate is set to $10^{-4}$. The pre-training batch size is 64, and the sequence length is set to 256. It takes about 30 hours to run 23,000 steps for the pre-training procedure by using 4 Nvidia Telsa V100-16GB GPUs."
+      ],
+      "highlighted_evidence": [
+        "We use a pre-trained Xnlg with a 10-layer encoder and a 6-layer decoder. For every Transformer layer, we use 1024 hidden units, 8 attention heads, and GELU activations BIBREF26. "
+      ]
+    },
+    {
+      "question": "What is the architecture of the encoder?",
+      "free_form_answer": "10 transformer layers, each layer containing 1024 hidden units, 8 attentions heads, and GELU activations.",
+      "evidence": [
+        "We use a pre-trained Xnlg with a 10-layer encoder and a 6-layer decoder. For every Transformer layer, we use 1024 hidden units, 8 attention heads, and GELU activations BIBREF26. In the first pre-training stage, we directly use the 15-language pre-trained XLM BIBREF5 to initialize the parameters of our encoder and decoder. In the second stage, we use Wikipedia as the monolingual data for the DAE objective, and MultiUN BIBREF27 as the parallel data for the XAE objective. The DAE loss is trained with a weight of $0.5$. We train a two-language (English/Chinese) and a three-language (English/French/Chinese) Xnlg for two downstream NLG tasks, respectively. Following BIBREF5, we use the tokenizer provided by BIBREF28 for Chinese, and Moses for other languages, respectively. Then the words in all languages are split with a shared subword vocabulary learned by BPE BIBREF29. We use Adam optimizer with a linear warm-up over the first 4,000 steps and linear decay for later steps, and the learning rate is set to $10^{-4}$. The pre-training batch size is 64, and the sequence length is set to 256. It takes about 30 hours to run 23,000 steps for the pre-training procedure by using 4 Nvidia Telsa V100-16GB GPUs."
+      ],
+      "highlighted_evidence": [
+        "We use a pre-trained Xnlg with a 10-layer encoder and a 6-layer decoder. For every Transformer layer, we use 1024 hidden units, 8 attention heads, and GELU activations BIBREF26. "
+      ]
+    }
+  ]
+}

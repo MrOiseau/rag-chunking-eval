@@ -1,0 +1,16 @@
+{
+  "paper_id": "1704.04451",
+  "title": "Optimizing Differentiable Relaxations of Coreference Evaluation Metrics",
+  "questions": [
+    {
+      "question": "How long is the training dataset?",
+      "free_form_answer": "3492",
+      "evidence": [
+        "We run experiments on the English portion of CoNLL 2012 data BIBREF15 which consists of 3,492 documents in various domains and formats. The split provided in the CoNLL 2012 shared task is used. In all our resolvers, we use not the original features of P15-1137 but their slight modification described in N16-1114 (section 6.1)."
+      ],
+      "highlighted_evidence": [
+        "We run experiments on the English portion of CoNLL 2012 data BIBREF15 which consists of 3,492 documents in various domains and formats."
+      ]
+    }
+  ]
+}

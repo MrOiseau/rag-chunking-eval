@@ -1,0 +1,21 @@
+{
+  "paper_id": "2003.09520",
+  "title": "TArC: Incrementally and Semi-Automatically Collecting a Tunisian Arabish Corpus",
+  "questions": [
+    {
+      "question": "How does the semi-automatic construction process work?",
+      "free_form_answer": "Automatic transcription of 5000 tokens through sequential neural models trained on the annotated part of the corpus",
+      "evidence": [
+        "In order to make the corpus collection easier and faster, we adopted a semi-automatic procedure based on sequential neural models BIBREF19, BIBREF20. Since transcribing Arabish into Arabic is by far the most important information to study the Arabish code-system, the semi-automatic procedure concerns only transcription from Arabish to Arabic script. In order to proceed, we used the first group of (roughly) 6,000 manually transcribed tokens as training and test data sets in a 10-fold cross validation setting with 9-1 proportions for training and test, respectively. As we explained in the previous section, French tokens were removed from the data. More precisely, whole sentences containing non-transcribable French tokens (code-switching) were removed from the data. Since at this level there is no way for predicting when a French word can be transcribed into Arabic and when it has to be left unchanged, French tokens create some noise for an automatic, probabilistic model. After removing sentences with French tokens, the data reduced to roughly 5,000 tokens. We chose this amount of tokens for annotation blocks in our incremental annotation procedure.",
+        "We note that by combining sentence, paragraph and token index in the corpus, whole sentences can be reconstructed. However, from 5,000 tokens roughly 300 sentences could be reconstructed, which are far too few to be used for training a neural model. Instead, since tokens are transcribed at morpheme level, we split Arabish tokens into characters, and Arabic tokens into morphemes, and we treated each token itself as a sequence. Our model learns thus to map Arabish characters into Arabic morphemes.",
+        "The 10-fold cross validation with this setting gave a token-level accuracy of roughly 71%. This result is not satisfactory on an absolute scale, however it is more than encouraging taking into account the small size of our data. This result means that less than 3 tokens, on average, out of 10, must be corrected to increase the size of our corpus. With this model we automatically transcribed into Arabic morphemes, roughly, 5,000 additional tokens, corresponding to the second annotation block. This can be manually annotated in at least 7,5 days, but thanks to the automatic annotation accuracy, it was manually corrected into 3 days. The accuracy of the model on the annotation of the second block was roughly 70%, which corresponds to the accuracy on the test set. The manually-corrected additional tokens were added to the training data of our neural model, and a new block was automatically annotated and manually corrected. Both accuracy on the test set and on the annotation block remained at around 70%. This is because the block added to the training data was significantly different from the previous and from the third. Adding the third block to the training data and annotating a fourth block with the new trained model gave in contrast an accuracy of roughly 80%. This incremental, semi-automatic transcription procedure is in progress for the remaining blocks, but it is clear that it will make the corpus annotation increasingly easier and faster as the amount of training data will grow up."
+      ],
+      "highlighted_evidence": [
+        "In order to make the corpus collection easier and faster, we adopted a semi-automatic procedure based on sequential neural models BIBREF19, BIBREF20.",
+        "Instead, since tokens are transcribed at morpheme level, we split Arabish tokens into characters, and Arabic tokens into morphemes, and we treated each token itself as a sequence. Our model learns thus to map Arabish characters into Arabic morphemes.",
+        "With this model we automatically transcribed into Arabic morphemes, roughly, 5,000 additional tokens, corresponding to the second annotation block. ",
+        "Manual transcription plus a"
+      ]
+    }
+  ]
+}

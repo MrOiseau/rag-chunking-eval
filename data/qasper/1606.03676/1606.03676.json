@@ -1,0 +1,18 @@
+{
+  "paper_id": "1606.03676",
+  "title": "External Lexical Information for Multilingual Part-of-Speech Tagging",
+  "questions": [
+    {
+      "question": "which datasets did they experiment with?",
+      "free_form_answer": "Universal Dependencies v1.2 treebanks for the following 16 languages: Bulgarian, Croatian, Czech, Danish, English, French, German,\nIndonesian, Italian, Norwegian, Persian, Polish, Portuguese, Slovenian, Spanish, and Swedish",
+      "evidence": [
+        "We carried out our experiments on the Universal Dependencies v1.2 treebanks BIBREF21 , hereafter UD1.2, from which morphosyntactically annotated corpora can be trivially extracted. All UD1.2 corpora use a common tag set, the 17 universal PoS tags, which is an extension of the tagset proposed by BIBREF43 .",
+        "As our goal is to study the impact of lexical information for PoS tagging, we have restricted our experiments to UD1.2 corpora that cover languages for which we have morphosyntactic lexicons at our disposal, and for which BIBREF20 provide results. We considered UD1.2 corpora for the following 16 languages: Bulgarian, Croatian, Czech, Danish, English, French, German, Indonesian, Italian, Norwegian, Persian, Polish, Portuguese, Slovenian, Spanish and Swedish. Although this language list contains only one non-Indo-European (Indonesian), four major Indo-European sub-families are represented (Germanic, Romance, Slavic, Indo-Iranian). Overall, the 16 languages considered in our experiments are typologically, morphologically and syntactically fairly diverse."
+      ],
+      "highlighted_evidence": [
+        "We carried out our experiments on the Universal Dependencies v1.2 treebanks BIBREF21 , hereafter UD1.2, from which morphosyntactically annotated corpora can be trivially extracted. ",
+        "We considered UD1.2 corpora for the following 16 languages: Bulgarian, Croatian, Czech, Danish, English, French, German, Indonesian, Italian, Norwegian, Persian, Polish, Portuguese, Slovenian, Spanish and Swedish. "
+      ]
+    }
+  ]
+}

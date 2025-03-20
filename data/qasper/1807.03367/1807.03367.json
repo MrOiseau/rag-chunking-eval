@@ -1,0 +1,35 @@
+{
+  "paper_id": "1807.03367",
+  "title": "Talk the Walk: Navigating New York City through Grounded Dialogue",
+  "questions": [
+    {
+      "question": "What language do the agents talk in?",
+      "free_form_answer": "English",
+      "evidence": [
+        "Tourist: I can't go straight any further.",
+        "Guide: ok. turn so that the theater is on your right.",
+        "Guide: then go straight",
+        "Tourist: That would be going back the way I came",
+        "Guide: yeah. I was looking at the wrong bank",
+        "Tourist: I'll notify when I am back at the brooks brothers, and the bank.",
+        "Tourist: ACTION:TURNRIGHT ACTION:TURNRIGHT",
+        "Guide: make a right when the bank is on your left",
+        "Tourist: ACTION:FORWARD ACTION:FORWARD ACTION:TURNRIGHT",
+        "Tourist: Making the right at the bank.",
+        "Tourist: ACTION:FORWARD ACTION:FORWARD ACTION:FORWARD ACTION:TURNLEFT ACTION:TURNLEFT",
+        "Tourist: I can't go that way.",
+        "Tourist: ACTION:TURNLEFT ACTION:TURNLEFT ACTION:TURNLEFT",
+        "Tourist: Bank is ahead of me on the right",
+        "Tourist: ACTION:FORWARD ACTION:FORWARD ACTION:TURNLEFT",
+        "Guide: turn around on that intersection",
+        "Tourist: I can only go to the left or back the way I just came.",
+        "Guide: you're in the right place. do you see shops on the corners?",
+        "Guide: If you're on the corner with the bank, cross the street",
+        "Tourist: I'm back where I started by the shop and the bank."
+      ],
+      "highlighted_evidence": [
+        "Tourist: I can't go straight any further.\n\nGuide: ok. turn so that the theater is on your right.\n\nGuide: then go straight\n\nTourist: That would be going back the way I came\n\nGuide: yeah. I was looking at the wrong bank\n\nTourist: I'll notify when I am back at the brooks brothers, and the bank.\n\nTourist: ACTION:TURNRIGHT\n\nGuide: make a right when the bank is on your left\n\nTourist: ACTION:FORWARD ACTION:FORWARD ACTION:TURNRIGHT\n\nTourist: Making the right at the bank.\n\nTourist: ACTION:FORWARD ACTION:FORWARD\n\nTourist: I can't go that way.\n\nTourist: ACTION:TURNLEFT\n\nTourist: Bank is ahead of me on the right\n\nTourist: ACTION:FORWARD ACTION:FORWARD ACTION:TURNLEFT\n\nGuide: turn around on that intersection\n\nTourist: I can only go to the left or back the way I just came.\n\nTourist: ACTION:TURNLEFT\n\nGuide: you're in the right place. do you see shops on the corners?\n\nGuide: If you're on the corner with the bank, cross the street\n\nTourist: I'm back where I started by the shop and the bank.\n\nTourist: ACTION:TURNRIGHT"
+      ]
+    }
+  ]
+}

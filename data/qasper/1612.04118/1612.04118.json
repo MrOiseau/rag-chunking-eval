@@ -1,0 +1,26 @@
+{
+  "paper_id": "1612.04118",
+  "title": "Information Extraction with Character-level Neural Networks and Free Noisy Supervision",
+  "questions": [
+    {
+      "question": "by how much did the system improve?",
+      "free_form_answer": "By more than 90%",
+      "evidence": [
+        "In a production setting, the neural architecture presented here reduced the number of false positive extractions in financial information extraction application by INLINEFORM0 relative to a mature system developed over the course of several years."
+      ],
+      "highlighted_evidence": [
+        "In a production setting, the neural architecture presented here reduced the number of false positive extractions in financial information extraction application by INLINEFORM0 relative to a mature system developed over the course of several years."
+      ]
+    },
+    {
+      "question": "by how much did the system improve?",
+      "free_form_answer": "false positives improved by 90% and recall improved by 1%",
+      "evidence": [
+        "The full pipeline, deployed in a production setting, resulted in a reduction in false positives of more than INLINEFORM0 in the extractions produced by our pipeline. The drop in recall relative to the production system was smaller than INLINEFORM1 ."
+      ],
+      "highlighted_evidence": [
+        "The full pipeline, deployed in a production setting, resulted in a reduction in false positives of more than INLINEFORM0 in the extractions produced by our pipeline. The drop in recall relative to the production system was smaller than INLINEFORM1 ."
+      ]
+    }
+  ]
+}

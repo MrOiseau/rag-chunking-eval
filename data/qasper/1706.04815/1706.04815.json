@@ -1,0 +1,16 @@
+{
+  "paper_id": "1706.04815",
+  "title": "S-Net: From Answer Extraction to Answer Generation for Machine Reading Comprehension",
+  "questions": [
+    {
+      "question": "What two components are included in their proposed framework?",
+      "free_form_answer": "evidence extraction and answer synthesis",
+      "evidence": [
+        "In this paper, we present an extraction-then-synthesis framework for machine reading comprehension shown in Figure 1 , in which the answer is synthesized from the extraction results. We build an evidence extraction model to predict the most important sub-spans from the passages as evidence, and then develop an answer synthesis model which takes the evidence as additional features along with the question and passage to further elaborate the final answers."
+      ],
+      "highlighted_evidence": [
+        "In this paper, we present an extraction-then-synthesis framework for machine reading comprehension shown in Figure 1 , in which the answer is synthesized from the extraction results. We build an evidence extraction model to predict the most important sub-spans from the passages as evidence, and then develop an answer synthesis model which takes the evidence as additional features along with the question and passage to further elaborate the final answers."
+      ]
+    }
+  ]
+}

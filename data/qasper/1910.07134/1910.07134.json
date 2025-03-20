@@ -1,0 +1,16 @@
+{
+  "paper_id": "1910.07134",
+  "title": "Efficiency through Auto-Sizing: Notre Dame NLP's Submission to the WNGT 2019 Efficiency Task",
+  "questions": [
+    {
+      "question": "What is WNGT 2019 shared task?",
+      "free_form_answer": "efficiency task aimed  at reducing the number of parameters while minimizing drop in performance",
+      "evidence": [
+        "The Transformer network BIBREF3 is a neural sequence-to-sequence model that has achieved state-of-the-art results in machine translation. However, Transformer models tend to be very large, typically consisting of hundreds of millions of parameters. As the number of parameters directly corresponds to secondary storage requirements and memory consumption during inference, using Transformer networks may be prohibitively expensive in scenarios with constrained resources. For the 2019 Workshop on Neural Generation of Text (WNGT) Efficiency shared task BIBREF0, the Notre Dame Natural Language Processing (NDNLP) group looked at a method of inducing sparsity in parameters called auto-sizing in order to reduce the number of parameters in the Transformer at the cost of a relatively minimal drop in performance."
+      ],
+      "highlighted_evidence": [
+        "For the 2019 Workshop on Neural Generation of Text (WNGT) Efficiency shared task BIBREF0, the Notre Dame Natural Language Processing (NDNLP) group looked at a method of inducing sparsity in parameters called auto-sizing in order to reduce the number of parameters in the Transformer at the cost of a relatively minimal drop in performance."
+      ]
+    }
+  ]
+}

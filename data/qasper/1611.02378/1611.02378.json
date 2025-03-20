@@ -1,0 +1,26 @@
+{
+  "paper_id": "1611.02378",
+  "title": "A Surrogate-based Generic Classifier for Chinese TV Series Reviews",
+  "questions": [
+    {
+      "question": "How many TV series are considered?",
+      "free_form_answer": "3",
+      "evidence": [
+        "What we are interested in are the reviews of the hottest or currently broadcasted TV series, so we select one of the most influential movie and TV series sharing websites in China, Douban. For every movie or TV series, you can find a corresponding section in it. For the sake of popularity, we choose \u201cThe Journey of Flower\u201d, \u201cNirvana in Fire\u201d and \u201cGood Time\u201d as parts of our movie review dataset, which are the hottest TV series from summer to fall 2015. Reviews of each episode have been collected for the sake of dataset comprehensiveness."
+      ],
+      "highlighted_evidence": [
+        "For the sake of popularity, we choose \u201cThe Journey of Flower\u201d, \u201cNirvana in Fire\u201d and \u201cGood Time\u201d as parts of our movie review dataset, which are the hottest TV series from summer to fall 2015."
+      ]
+    },
+    {
+      "question": "How many TV series are considered?",
+      "free_form_answer": "Three tv series are considered.",
+      "evidence": [
+        "What we are interested in are the reviews of the hottest or currently broadcasted TV series, so we select one of the most influential movie and TV series sharing websites in China, Douban. For every movie or TV series, you can find a corresponding section in it. For the sake of popularity, we choose \u201cThe Journey of Flower\u201d, \u201cNirvana in Fire\u201d and \u201cGood Time\u201d as parts of our movie review dataset, which are the hottest TV series from summer to fall 2015. Reviews of each episode have been collected for the sake of dataset comprehensiveness."
+      ],
+      "highlighted_evidence": [
+        "For the sake of popularity, we choose \u201cThe Journey of Flower\u201d, \u201cNirvana in Fire\u201d and \u201cGood Time\u201d as parts of our movie review dataset, which are the hottest TV series from summer to fall 2015."
+      ]
+    }
+  ]
+}

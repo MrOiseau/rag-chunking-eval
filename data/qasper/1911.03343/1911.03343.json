@@ -1,0 +1,16 @@
+{
+  "paper_id": "1911.03343",
+  "title": "Negated LAMA: Birds cannot fly",
+  "questions": [
+    {
+      "question": "How did they extend LAMA evaluation framework to focus on negation?",
+      "free_form_answer": "Create the negated LAMA dataset and  query the pretrained language models with both original LAMA and negated LAMA statements and compare their predictions.",
+      "evidence": [
+        "This work analyzes the understanding of pretrained language models of factual and commonsense knowledge stored in negated statements. To this end, we introduce the negated LAMA dataset. We construct it by simply inserting negation elements (e.g., \u201cnot\u201d) in LAMA cloze statement (e.g., \u201cThe theory of relativity was not developed by [MASK].\u201d). In our experiments, we query the pretrained language models with both original LAMA and negated LAMA statements and compare their predictions in terms of rank correlation and overlap of top predictions. We find that the predicted filler words often have high overlap. Thus, negating a cloze statement does not change the predictions in many cases \u2013 but of course it should as our example \u201cbirds can fly\u201d vs. \u201cbirds cannot fly\u201d shows. We identify and analyze a subset of cloze statements where predictions are different. We find that BERT handles negation best among pretrained language models, but it still fails badly on most negated statements."
+      ],
+      "highlighted_evidence": [
+        ". To this end, we introduce the negated LAMA dataset. We construct it by simply inserting negation elements (e.g., \u201cnot\u201d) in LAMA cloze statement (e.g., \u201cThe theory of relativity was not developed by [MASK].\u201d). In our experiments, we query the pretrained language models with both original LAMA and negated LAMA statements and compare their predictions in terms of rank correlation and overlap of top predictions."
+      ]
+    }
+  ]
+}

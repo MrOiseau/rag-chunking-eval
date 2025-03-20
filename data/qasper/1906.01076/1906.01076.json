@@ -1,0 +1,16 @@
+{
+  "paper_id": "1906.01076",
+  "title": "Episodic Memory in Lifelong Language Learning",
+  "questions": [
+    {
+      "question": "What is episodic memory?",
+      "free_form_answer": "It is a memory that stores previously seen examples throughout its lifetime",
+      "evidence": [
+        "Our model is augmented with an episodic memory module that stores previously seen examples throughout its lifetime. The episodic memory module is used for sparse experience replay and local adaptation to prevent catastrophic forgetting and encourage positive transfer. We first describe the architecture of our episodic memory module, before discussing how it is used at training and inference (prediction) time in \u00a7 SECREF3 ."
+      ],
+      "highlighted_evidence": [
+        "Our model is augmented with an episodic memory module that stores previously seen examples throughout its lifetime. "
+      ]
+    }
+  ]
+}

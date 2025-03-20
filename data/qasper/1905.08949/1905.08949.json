@@ -1,0 +1,29 @@
+{
+  "paper_id": "1905.08949",
+  "title": "Recent Advances in Neural Question Generation",
+  "questions": [
+    {
+      "question": "What learning paradigms do they cover in this survey?",
+      "free_form_answer": "Considering \"What\" and \"How\" separately versus jointly optimizing for both.",
+      "evidence": [
+        "Past research took a reductionist approach, separately considering these two problems of \u201cwhat\u201d and \u201chow\u201d via content selection and question construction. Given a sentence or a paragraph as input, content selection selects a particular salient topic worthwhile to ask about and determines the question type (What, When, Who, etc.). Approaches either take a syntactic BIBREF11 , BIBREF12 , BIBREF13 or semantic BIBREF14 , BIBREF3 , BIBREF15 , BIBREF16 tack, both starting by applying syntactic or semantic parsing, respectively, to obtain intermediate symbolic representations. Question construction then converts intermediate representations to a natural language question, taking either a tranformation- or template-based approach. The former BIBREF17 , BIBREF18 , BIBREF13 rearranges the surface form of the input sentence to produce the question; the latter BIBREF19 , BIBREF20 , BIBREF21 generates questions from pre-defined question templates. Unfortunately, such QG architectures are limiting, as their representation is confined to the variety of intermediate representations, transformation rules or templates.",
+        "In contrast, neural models motivate an end-to-end architectures. Deep learned frameworks contrast with the reductionist approach, admitting approaches that jointly optimize for both the \u201cwhat\u201d and \u201chow\u201d in an unified framework. The majority of current NQG models follow the sequence-to-sequence (Seq2Seq) framework that use a unified representation and joint learning of content selection (via the encoder) and question construction (via the decoder). In this framework, traditional parsing-based content selection has been replaced by more flexible approaches such as attention BIBREF22 and copying mechanism BIBREF23 . Question construction has become completely data-driven, requiring far less labor compared to transformation rules, enabling better language flexibility compared to question templates."
+      ],
+      "highlighted_evidence": [
+        "Past research took a reductionist approach, separately considering these two problems of \u201cwhat\u201d and \u201chow\u201d via content selection and question construction. ",
+        "In contrast, neural models motivate an end-to-end architectures. Deep learned frameworks contrast with the reductionist approach, admitting approaches that jointly optimize for both the \u201cwhat\u201d and \u201chow\u201d in an unified framework. "
+      ]
+    },
+    {
+      "question": "What are all the input modalities considered in prior work in question generation?",
+      "free_form_answer": "Textual inputs, knowledge bases, and images.",
+      "evidence": [
+        "Question generation is an NLG task for which the input has a wealth of possibilities depending on applications. While a host of input modalities have been considered in other NLG tasks, such as text summarization BIBREF24 , image captioning BIBREF25 and table-to-text generation BIBREF26 , traditional QG mainly focused on textual inputs, especially declarative sentences, explained by the original application domains of question answering and education, which also typically featured textual inputs.",
+        "Recently, with the growth of various QA applications such as Knowledge Base Question Answering (KBQA) BIBREF27 and Visual Question Answering (VQA) BIBREF28 , NQG research has also widened the spectrum of sources to include knowledge bases BIBREF29 and images BIBREF10 . This trend is also spurred by the remarkable success of neural models in feature representation, especially on image features BIBREF30 and knowledge representations BIBREF31 . We discuss adapting NQG models to other input modalities in Section \"Wider Input Modalities\" ."
+      ],
+      "highlighted_evidence": [
+        "While a host of input modalities have been considered in other NLG tasks, such as text summarization BIBREF24 , image captioning BIBREF25 and table-to-text generation BIBREF26 , traditional QG mainly focused on textual inputs, especially declarative sentences, explained by the original application domains of question answering and education, which also typically featured textual inputs.\n\nRecently, with the growth of various QA applications such as Knowledge Base Question Answering (KBQA) BIBREF27 and Visual Question Answering (VQA) BIBREF28 , NQG research has also widened the spectrum of sources to include knowledge bases BIBREF29 and images BIBREF10 ."
+      ]
+    }
+  ]
+}

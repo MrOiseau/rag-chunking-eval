@@ -1,0 +1,16 @@
+{
+  "paper_id": "1810.10254",
+  "title": "Learn to Code-Switch: Data Augmentation using Copy Mechanism on Language Modeling",
+  "questions": [
+    {
+      "question": "What parallel corpus did they use?",
+      "free_form_answer": "Parallel monolingual corpus in English and Mandarin",
+      "evidence": [
+        "In this section, we present the experimental settings for pointer-generator network and language model. Our experiment, our pointer-generator model has 500-dimensional hidden states and word embeddings. We use 50k words as our vocabulary for source and target. We evaluate our pointer-generator performance using BLEU score. We take the best model as our generator and during the decoding stage, we generate 1-best and 3-best using beam search with a beam size of 5. For the input, we build a parallel monolingual corpus by translating the mixed language sequence using Google NMT to English ( INLINEFORM0 ) and Mandarin ( INLINEFORM1 ) sequences. Then, we concatenate the translated English and Mandarin sequences and assign code-switching sequences as the labels ( INLINEFORM2 )."
+      ],
+      "highlighted_evidence": [
+        "For the input, we build a parallel monolingual corpus by translating the mixed language sequence using Google NMT to English ( INLINEFORM0 ) and Mandarin ( INLINEFORM1 ) sequences."
+      ]
+    }
+  ]
+}

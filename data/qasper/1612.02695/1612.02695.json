@@ -1,0 +1,18 @@
+{
+  "paper_id": "1612.02695",
+  "title": "Towards better decoding and language model integration in sequence to sequence models",
+  "questions": [
+    {
+      "question": "What are the solutions proposed for the seq2seq shortcomings?",
+      "free_form_answer": "label smoothing, use of coverage",
+      "evidence": [
+        "A elegant solution to model overconfidence was problem proposed for the Inception image recognition architecture BIBREF15 . For the purpose of computing the training cost the ground-truth label distribution is smoothed, with some fraction of the probability mass assigned to classes other than the correct one. This in turn prevents the model from learning to concentrate all probability mass on a single token. Additionally, the model receives more training signal because the error function cannot easily saturate.",
+        "We compare three strategies designed to prevent incomplete transcripts. The first strategy doesn't change the beam search criterion, but forbids emitting the EOS token unless its probability is within a set range of that of the most probable token. This strategy prevents truncations, but is inefficient against omissions in the middle of the transcript, such as the failure shown in Table TABREF17 . Alternatively, beam search criterion can be extended to promote long transcripts. A term depending on the transcript length was proposed for both CTC BIBREF3 and seq2seq BIBREF11 networks, but its usage was reported to be difficult because beam search was looping over parts of the recording and additional constraints were needed BIBREF11 . To prevent looping we propose to use a coverage term that counts the number of frames that have received a cumulative attention greater than INLINEFORM0 : DISPLAYFORM0"
+      ],
+      "highlighted_evidence": [
+        "A elegant solution to model overconfidence was problem proposed for the Inception image recognition architecture BIBREF15 . For the purpose of computing the training cost the ground-truth label distribution is smoothed, with some fraction of the probability mass assigned to classes other than the correct one. ",
+        "To prevent looping we propose to use a coverage term that counts the number of frames that have received a cumulative attention greater than INLINEFORM0 : DISPLAYFORM0"
+      ]
+    }
+  ]
+}

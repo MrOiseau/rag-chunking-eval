@@ -1,0 +1,30 @@
+{
+  "paper_id": "2003.09244",
+  "title": "Language Technology Programme for Icelandic 2019-2023",
+  "questions": [
+    {
+      "question": "What concrete software is planned to be developed by the end of the programme?",
+      "free_form_answer": "A lot of new software will be developed in all areas of the programme, some will be extensions of already available Greynir software.",
+      "evidence": [
+        "Previously, two tokenisers have been built for Icelandic, one is a part of IceNLP and the other a part of Greynir. As Greynir is still in active development, it will be used as a base for the LT project's development. In order to be able to test the tokenisers' accuracy, a test set that takes different tokeniser settings into account will be developed.",
+        "Software development. The software development tasks of the spell and grammar checking project will build a working open source correction system whose development is informed by the analysis of the data sets created within the project. The spell and grammar checker will be based on the foundation for processing Icelandic text provided by the Greynir system.",
+        "Software implementation and research. The research areas are chosen so to enhance the language resource development for Icelandic. A punctuation system for Icelandic will be analysed and implemented. Compound words are common in Icelandic and the language also has a relatively rich inflection structure so it is important to address those features for language modeling. Pronunciation analysis, speaker diarization and speech analysis will also be addressed especially for Icelandic, and acoustic modelling for children and teenagers receive attention in the project."
+      ],
+      "highlighted_evidence": [
+        "As Greynir is still in active development, it will be used as a base for the LT project's development.",
+        "The spell and grammar checker will be based on the foundation for processing Icelandic text provided by the Greynir system.",
+        "Software implementation and research. The research areas are chosen so to enhance the language resource development for Icelandic. A punctuation system for Icelandic will be analysed and implemented."
+      ]
+    },
+    {
+      "question": "When did language technology start in Iceland?",
+      "free_form_answer": "Around year 2000",
+      "evidence": [
+        "The history of Icelandic LT is usually considered to have begun around the turn of the century, even though a couple of LT resources and products were developed in the years leading up to that. Following the report of an expert group appointed by the Minister of Education, Science and Culture BIBREF7, the Icelandic Government launched a special LT Programme in the year 2000, with the aim of supporting institutions and companies to create basic resources for Icelandic LT work. This initiative resulted in a few projects which laid the ground for future work in the field. The most important of these were a 25 million token, balanced, tagged corpus, a full-form database of Icelandic inflections, a training model for PoS taggers, an improved speech synthesiser, and an isolated word speech recogniser BIBREF8."
+      ],
+      "highlighted_evidence": [
+        "The history of Icelandic LT is usually considered to have begun around the turn of the century, even though a couple of LT resources and products were developed in the years leading up to that. "
+      ]
+    }
+  ]
+}

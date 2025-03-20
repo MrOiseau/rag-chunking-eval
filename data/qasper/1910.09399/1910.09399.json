@@ -1,0 +1,18 @@
+{
+  "paper_id": "1910.09399",
+  "title": "A Survey and Taxonomy of Adversarial Neural Networks for Text-to-Image Synthesis",
+  "questions": [
+    {
+      "question": "What is typical GAN architecture for each text-to-image synhesis group?",
+      "free_form_answer": "Semantic Enhancement GANs: DC-GANs, MC-GAN\nResolution Enhancement GANs: StackGANs, AttnGAN, HDGAN\nDiversity Enhancement GANs: AC-GAN, TAC-GAN etc.\nMotion Enhancement GAGs: T2S, T2V, StoryGAN",
+      "evidence": [
+        "In this section, we propose a taxonomy to summarize advanced GAN based text-to-image synthesis frameworks, as shown in Figure FIGREF24. The taxonomy organizes GAN frameworks into four categories, including Semantic Enhancement GANs, Resolution Enhancement GANs, Diversity Enhancement GANs, and Motion Enhancement GAGs. Following the proposed taxonomy, each subsection will introduce several typical frameworks and address their techniques of using GANS to solve certain aspects of the text-to-mage synthesis challenges.",
+        "FLOAT SELECTED: Figure 9. A Taxonomy and categorization of advanced GAN frameworks for Text-to-Image Synthesis. We categorize advanced GAN frameworks into four major categories: Semantic Enhancement GANs, Resolution Enhancement GANs, Diversity Enhancement GANs, and Motion Enhancement GAGs. The relationship between relevant frameworks and their publication date are also outlined as a reference."
+      ],
+      "highlighted_evidence": [
+        "In this section, we propose a taxonomy to summarize advanced GAN based text-to-image synthesis frameworks, as shown in Figure FIGREF24.",
+        "FLOAT SELECTED: Figure 9. A Taxonomy and categorization of advanced GAN frameworks for Text-to-Image Synthesis. We categorize advanced GAN frameworks into four major categories: Semantic Enhancement GANs, Resolution Enhancement GANs, Diversity Enhancement GANs, and Motion Enhancement GAGs. The relationship between relevant frameworks and their publication date are also outlined as a reference."
+      ]
+    }
+  ]
+}

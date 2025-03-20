@@ -1,0 +1,26 @@
+{
+  "paper_id": "1805.04558",
+  "title": "NRC-Canada at SMM4H Shared Task: Classifying Tweets Mentioning Adverse Drug Reactions and Medication Intake",
+  "questions": [
+    {
+      "question": "why do they think sentiment features do not result in improvement?",
+      "free_form_answer": "Because sentiment features extracted the same information as other features.",
+      "evidence": [
+        "Table TABREF42 shows the performance of our best system (submission 1) when one of the feature groups is removed. In this task, the general textual features (row b) played a bigger role in the overall performance than the domain-specific (row c) or sentiment lexicon (row d) features. Removing this group of features results in more than 2.5 percentage points drop in the F-measure affecting both precision and recall (row b). However, removing any one feature subgroup in this group (e.g., general INLINEFORM0 -grams, general clusters, general embeddings, etc.) results only in slight drop or even increase in the performance (rows b.1\u2013b.4). This indicates that the features in this group capture similar information. Among the domain-specific features, the INLINEFORM1 -grams generalized over domain terms are the most useful. The model trained without these INLINEFORM2 -grams features performs almost one percentage point worse than the model that uses all the features (row c.1). The sentiment lexicon features were not helpful (row d)."
+      ],
+      "highlighted_evidence": [
+        " However, removing any one feature subgroup in this group (e.g., general INLINEFORM0 -grams, general clusters, general embeddings, etc.) results only in slight drop or even increase in the performance (rows b.1\u2013b.4). This indicates that the features in this group capture similar information. "
+      ]
+    },
+    {
+      "question": "what was the size of the datasets?",
+      "free_form_answer": "10822, 4845",
+      "evidence": [
+        "Two labeled datasets were provided to the participants: a training set containing 10,822 tweets and a development set containing 4,845 tweets. These datasets were distributed as lists of tweet IDs, and the participants needed to download the tweets using the provided Python script. However, only about 60\u201370% of the tweets were accessible at the time of download (May 2017). The training set contained several hundreds of duplicate or near-duplicate messages, which we decided to remove. Near-duplicates were defined as tweets containing mostly the same text but differing in user mentions, punctuation, or other non-essential context. A separate test set of 9,961 tweets was provided without labels at the evaluation period. This set was distributed to the participants, in full, by email. Table TABREF1 shows the number of instances we used for training and testing our model."
+      ],
+      "highlighted_evidence": [
+        "Two labeled datasets were provided to the participants: a training set containing 10,822 tweets and a development set containing 4,845 tweets."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "paper_id": "1906.01010",
+  "title": "A computational linguistic study of personal recovery in bipolar disorder",
+  "questions": [
+    {
+      "question": "Was permission sought from the bipolar patients to use this data?",
+      "free_form_answer": "For Twitter and Reddit users , implicit consent is assumed to use their public tweets. Blog users are  contacted to obtain consent for using their texts.",
+      "evidence": [
+        "We plan to collect data relevant for BD in general as well as for personal recovery in BD from three sources varying in their available amount versus depth of the accounts we expect to find: 1) Twitter, 2) Reddit (focusing on mental health-related content unlike previous work), 3) blogs authored by affected individuals. Twitter and Reddit users with a BD diagnosis will be identified automatically via self-reported diagnosis statements, such as `I was diagnosed with BD-I last week'. To do so, we will extend on the diagnosis patterns and terms for BD provided by BIBREF47 . Implicit consent is assumed from users on these platforms to use their public tweets and posts. SECREF3 Relevant blogs will be manually identified, and their authors will be contacted to obtain informed consent for using their texts."
+      ],
+      "highlighted_evidence": [
+        "Twitter and Reddit users with a BD diagnosis will be identified automatically via self-reported diagnosis statements, such as `I was diagnosed with BD-I last week'. To do so, we will extend on the diagnosis patterns and terms for BD provided by BIBREF47 . Implicit consent is assumed from users on these platforms to use their public tweets and posts. SECREF3 Relevant blogs will be manually identified, and their authors will be contacted to obtain informed consent for using their texts."
+      ]
+    },
+    {
+      "question": "How are the individuals with bipolar disorder identified?",
+      "free_form_answer": "Twitter and Reddit users  are identified automatically  via self-reported diagnosis statements. Blog users are identified manually.",
+      "evidence": [
+        "We plan to collect data relevant for BD in general as well as for personal recovery in BD from three sources varying in their available amount versus depth of the accounts we expect to find: 1) Twitter, 2) Reddit (focusing on mental health-related content unlike previous work), 3) blogs authored by affected individuals. Twitter and Reddit users with a BD diagnosis will be identified automatically via self-reported diagnosis statements, such as `I was diagnosed with BD-I last week'. To do so, we will extend on the diagnosis patterns and terms for BD provided by BIBREF47 . Implicit consent is assumed from users on these platforms to use their public tweets and posts. SECREF3 Relevant blogs will be manually identified, and their authors will be contacted to obtain informed consent for using their texts."
+      ],
+      "highlighted_evidence": [
+        "Relevant blogs will be manually identified, and their authors will be contacted to obtain informed consent for using their texts.",
+        " Twitter and Reddit users with a BD diagnosis will be identified automatically via self-reported diagnosis statements, such as `I was diagnosed with BD-I last week'. "
+      ]
+    }
+  ]
+}

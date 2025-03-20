@@ -1,0 +1,36 @@
+{
+  "paper_id": "1706.00139",
+  "title": "Natural Language Generation for Spoken Dialogue System using RNN Encoder-Decoder Networks",
+  "questions": [
+    {
+      "question": "What is the difference of the proposed model with a standard RNN encoder-decoder?",
+      "free_form_answer": "Introduce a \"Refinement Adjustment LSTM-based component\" to the decoder",
+      "evidence": [
+        "While the RNN-based generators with DA gating-vector can prevent the undesirable semantic repetitions, the ARED-based generators show signs of better adapting to a new domain. However, none of the models show significant advantage from out-of-domain data. To better analyze model generalization to an unseen, new domain as well as model leveraging the out-of-domain sources, we propose a new architecture which is an extension of the ARED model. In order to better select, aggregate and control the semantic information, a Refinement Adjustment LSTM-based component (RALSTM) is introduced to the decoder side. The proposed model can learn from unaligned data by jointly training the sentence planning and surface realization to produce natural language sentences. We conducted experiments on four different NLG domains and found that the proposed methods significantly outperformed the state-of-the-art methods regarding BLEU BIBREF15 and slot error rate ERR scores BIBREF4 . The results also showed that our generators could scale to new domains by leveraging the out-of-domain data. To sum up, we make three key contributions in this paper:"
+      ],
+      "highlighted_evidence": [
+        "To better analyze model generalization to an unseen, new domain as well as model leveraging the out-of-domain sources, we propose a new architecture which is an extension of the ARED model. In order to better select, aggregate and control the semantic information, a Refinement Adjustment LSTM-based component (RALSTM) is introduced to the decoder side. The proposed model can learn from unaligned data by jointly training the sentence planning and surface realization to produce natural language sentences. "
+      ]
+    },
+    {
+      "question": "Does the model evaluated on NLG datasets or dialog datasets?",
+      "free_form_answer": "NLG datasets",
+      "evidence": [
+        "We assessed the proposed models on four different NLG domains: finding a restaurant, finding a hotel, buying a laptop, and buying a television. The Restaurant and Hotel were collected in BIBREF4 , while the Laptop and TV datasets have been released by BIBREF22 with a much larger input space but only one training example for each DA so that the system must learn partial realization of concepts and be able to recombine and apply them to unseen DAs. This makes the NLG tasks for the Laptop and TV domains become much harder. The dataset statistics are shown in Table 1 ."
+      ],
+      "highlighted_evidence": [
+        "We assessed the proposed models on four different NLG domains: finding a restaurant, finding a hotel, buying a laptop, and buying a television. The Restaurant and Hotel were collected in BIBREF4 , while the Laptop and TV datasets have been released by BIBREF22 with a much larger input space but only one training example for each DA so that the system must learn partial realization of concepts and be able to recombine and apply them to unseen DAs. "
+      ]
+    },
+    {
+      "question": "Does the model evaluated on NLG datasets or dialog datasets?",
+      "free_form_answer": "NLG datasets",
+      "evidence": [
+        "We assessed the proposed models on four different NLG domains: finding a restaurant, finding a hotel, buying a laptop, and buying a television. The Restaurant and Hotel were collected in BIBREF4 , while the Laptop and TV datasets have been released by BIBREF22 with a much larger input space but only one training example for each DA so that the system must learn partial realization of concepts and be able to recombine and apply them to unseen DAs. This makes the NLG tasks for the Laptop and TV domains become much harder. The dataset statistics are shown in Table 1 ."
+      ],
+      "highlighted_evidence": [
+        "We assessed the proposed models on four different NLG domains: finding a restaurant, finding a hotel, buying a laptop, and buying a television. "
+      ]
+    }
+  ]
+}

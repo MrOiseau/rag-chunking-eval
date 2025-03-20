@@ -1,0 +1,28 @@
+{
+  "paper_id": "1911.12559",
+  "title": "KPTimes: A Large-Scale Dataset for Keyphrase Generation on News Documents",
+  "questions": [
+    {
+      "question": "How do the editors' annotations differ from those in existing datasets?",
+      "free_form_answer": "Existing datasets are annotated by non-experts who use a larger, less controlled indexed vocabulary lacking the domain expertise shown by the editors",
+      "evidence": [
+        "Frequently used datasets for keyphrase generation have a common characteristic that they are, by and large, made from scholarly documents (abstracts or full texts) paired with non-expert (mostly from authors) annotations. Notable examples of such datasets are SemEval-2010 BIBREF8 and KP20k BIBREF2, which respectively comprises scientific articles and paper abstracts, both about computer science and information technology. Detailed statistics are listed in Table . Only two publicly available datasets, that we are aware of, contain news documents: DUC-2001 BIBREF9 and KPCrowd BIBREF10. Originally created for the DUC evaluation campaign on text summarization BIBREF11, the former is composed of 308 news annotated by graduate students. The latter includes 500 news annotated by crowdsourcing. Both datasets are very small and contain newswire articles from various online sources labelled by non-expert annotators, in this case readers, which is not without issues.",
+        "We explored the KPTimes dataset to better understand how it stands out from the existing ones. First, we looked at how editors tag news articles. Figure illustrates the difference between the annotation behaviour of readers, authors and editors through the number of times that each unique keyphrase is used in the gold standard. We see that non-expert annotators use a larger, less controlled indexing vocabulary, in part because they lack the higher level of domain expertise that editors have. For example, we observe that frequent keyphrases in KPTimes are close to topic descriptors (e.g. \u201cBaseball\u201c, \u201cPolitics and Government\u201c) while those appearing only once are very precise (e.g. \u201cMarley's Cafe\u201c, \u201cCatherine E. Connelly\u201c). Annotations in KPTimes are arguably more uniform and consistent, through the use of tag suggestions, which, as we will soon discuss in \u00a7SECREF12, makes it easier for supervised approaches to learn a good model."
+      ],
+      "highlighted_evidence": [
+        "Frequently used datasets for keyphrase generation have a common characteristic that they are, by and large, made from scholarly documents (abstracts or full texts) paired with non-expert (mostly from authors) annotations.",
+        "We see that non-expert annotators use a larger, less controlled indexing vocabulary, in part because they lack the higher level of domain expertise that editors have. "
+      ]
+    },
+    {
+      "question": "How do the editors' annotations differ from those in existing datasets?",
+      "free_form_answer": "Exper annotators use a smaller, more controlled indexing vocabulary.",
+      "evidence": [
+        "We explored the KPTimes dataset to better understand how it stands out from the existing ones. First, we looked at how editors tag news articles. Figure illustrates the difference between the annotation behaviour of readers, authors and editors through the number of times that each unique keyphrase is used in the gold standard. We see that non-expert annotators use a larger, less controlled indexing vocabulary, in part because they lack the higher level of domain expertise that editors have. For example, we observe that frequent keyphrases in KPTimes are close to topic descriptors (e.g. \u201cBaseball\u201c, \u201cPolitics and Government\u201c) while those appearing only once are very precise (e.g. \u201cMarley's Cafe\u201c, \u201cCatherine E. Connelly\u201c). Annotations in KPTimes are arguably more uniform and consistent, through the use of tag suggestions, which, as we will soon discuss in \u00a7SECREF12, makes it easier for supervised approaches to learn a good model."
+      ],
+      "highlighted_evidence": [
+        "We see that non-expert annotators use a larger, less controlled indexing vocabulary, in part because they lack the higher level of domain expertise that editors have."
+      ]
+    }
+  ]
+}

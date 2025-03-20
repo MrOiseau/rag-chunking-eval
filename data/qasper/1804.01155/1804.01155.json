@@ -1,0 +1,40 @@
+{
+  "paper_id": "1804.01155",
+  "title": "Socioeconomic Dependencies of Linguistic Patterns in Twitter: A Multivariate Analysis",
+  "questions": [
+    {
+      "question": "How do they combine the socioeconomic maps with Twitter data? ",
+      "free_form_answer": "Match geolocation data for Twitter users with patches from INSEE socioeconomic maps.",
+      "evidence": [
+        "To overcome this limitation we combined our Twitter data with the socioeconomic maps of INSEE by assigning each geolocated Twitter user to a patch closest to their estimated home location (within 1 km). This way we obtained for all $110,369$ geolocated users their dynamical linguistic data, their egocentric social network as well as a set of SES indicators."
+      ],
+      "highlighted_evidence": [
+        "To overcome this limitation we combined our Twitter data with the socioeconomic maps of INSEE by assigning each geolocated Twitter user to a patch closest to their estimated home location (within 1 km). This way we obtained for all $110,369$ geolocated users their dynamical linguistic data, their egocentric social network as well as a set of SES indicators."
+      ]
+    },
+    {
+      "question": "How do they combine the socioeconomic maps with Twitter data? ",
+      "free_form_answer": "By matching users to locations using geolocated tweets data, then matching locations to socioeconomic status using INSEE sociodemographic data.",
+      "evidence": [
+        "To obtain a unique representative location of each user, we extracted the sequence of all declared locations from their geolocated tweets. Using this set of locations we selected the most frequent to be the representative one, and we took it as a proxy for the user's home location. Further we limited our users to ones located throughout the French territory thus not considering others tweeting from places outside the country. This selection method provided us with $110,369$ geolocated users who are either detected as French speakers or assigned to be such by Twitter and all associated to specific 'home' GPS coordinates in France. To verify the spatial distribution of the selected population, we further assessed the correlations between the true population distributions (obtained from census data BIBREF28 ) at different administrative level and the geolocated user distribution aggregated correspondingly. More precisely, we computed the $R^2$ coefficient of variation between the inferred and official population distributions (a) at the level of 22 regions. Correlations at this level induced a high coefficient of $R^2\\simeq 0.89$ ( $p<10^{-2}$ ); (b) At the arrondissement level with 322 administrative units and coefficient $R^2\\simeq 0.87$ ( $p<10^{-2}$ ); and (c) at the canton level with 4055 units with a coefficient $R\\simeq 0.16$ ( $p<10^{-2}$ ). Note that the relatively small coefficient at this level is due to the interplay of the sparsity of the inferred data and the fine grained spatial resolution of cantons. All in all, we can conclude that our sample is highly representative in terms of spatial population distribution, which at the same time validate our selection method despite the potential inherent biases induced by the method taking the most frequented GPS coordinates as the user's home location.",
+        "The second dataset we used was released in December 2016 by the National Institute of Statistics and Economic Studies (INSEE) of France. This data corpus BIBREF29 contains a set of sociodemographic aggregated indicators, estimated from the 2010 tax return in France, for each 4 hectare ( $200m \\times 200m$ ) square patch across the whole French territory. Using these indicators, one can estimate the distribution of the average socioeconomic status (SES) of people with high spatial resolution. In this study, we concentrated on three indicators for each patch $i$ , which we took to be good proxies of the socioeconomic status of the people living within them. These were the $S^i_\\mathrm {inc}$ average yearly income per capita (in euros), the $S^i_{\\mathrm {own}}$ fraction of owners (not renters) of real estate, and the $S^i_\\mathrm {den}$ density of population defined respectively as"
+      ],
+      "highlighted_evidence": [
+        "To obtain a unique representative location of each user, we extracted the sequence of all declared locations from their geolocated tweets. Using this set of locations we selected the most frequent to be the representative one, and we took it as a proxy for the user's home location.",
+        "The second dataset we used was released in December 2016 by the National Institute of Statistics and Economic Studies (INSEE) of France. This data corpus BIBREF29 contains a set of sociodemographic aggregated indicators, estimated from the 2010 tax return in France, for each 4 hectare ( $200m \\times 200m$ ) square patch across the whole French territory."
+      ]
+    },
+    {
+      "question": "How did they define standard language?",
+      "free_form_answer": "Use of both French negative particles and spelling out plural ending on adjectives and nouns",
+      "evidence": [
+        "The basic form of negation in French includes two negative particles: ne (no) before the verb and another particle after the verb that conveys more accurate meaning: pas (not), jamais (never), personne (no one), rien (nothing), etc. Due to this double construction, the first part of the negation (ne) is optional in spoken French, but it is obligatory in standard writing. Sociolinguistic studies have previously observed the realization of ne in corpora of recorded everyday spoken interactions. Although all the studies do not converge, a general trend is that ne realization is more frequent in speakers with higher socioeconomic status than in speakers with lower status BIBREF30 , BIBREF31 . We built upon this research to set out to detect both negation variants in the tweets using regular expressions. We are namely interested in the rate of usage of the standard negation (featuring both negative particles) across users:",
+        "In written French, adjectives and nouns are marked as being plural by generally adding the letters s or x at the end of the word. Because these endings are mute (without counterpart in spoken French), their omission is the most frequent spelling error in adults BIBREF32 . Moreover, studies showed correlations between standard spelling and social status of the writers, in preteens, teens and adults BIBREF33 , BIBREF32 , BIBREF34 . We then set to estimate the use of standard plural across users:"
+      ],
+      "highlighted_evidence": [
+        "The basic form of negation in French includes two negative particles: ne (no) before the verb and another particle after the verb that conveys more accurate meaning: pas (not), jamais (never), personne (no one), rien (nothing), etc. Due to this double construction, the first part of the negation (ne) is optional in spoken French, but it is obligatory in standard writing.",
+        "In written French, adjectives and nouns are marked as being plural by generally adding the letters s or x at the end of the word."
+      ]
+    }
+  ]
+}

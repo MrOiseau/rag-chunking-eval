@@ -1,0 +1,16 @@
+{
+  "paper_id": "1904.08386",
+  "title": "Casting Light on Invisible Cities: Computationally Engaging with Literary Criticism",
+  "questions": [
+    {
+      "question": "How do they obtain human judgements?",
+      "free_form_answer": "Using crowdsourcing ",
+      "evidence": [
+        "As the book is too small to train any models, we leverage recent advances in large-scale language model-based representations BIBREF5 , BIBREF6 to compute a representation of each city. We feed these representations into a clustering algorithm that produces exactly eleven clusters of five cities each and evaluate them against both Calvino's original labels and crowdsourced human judgments. While the overall correlation with Calvino's labels is low, both computers and humans can reliably identify some thematic groups associated with concrete objects."
+      ],
+      "highlighted_evidence": [
+        "We feed these representations into a clustering algorithm that produces exactly eleven clusters of five cities each and evaluate them against both Calvino's original labels and crowdsourced human judgments. While the overall correlation with Calvino's labels is low, both computers and humans can reliably identify some thematic groups associated with concrete objects."
+      ]
+    }
+  ]
+}

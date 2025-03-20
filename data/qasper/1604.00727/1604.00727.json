@@ -1,0 +1,18 @@
+{
+  "paper_id": "1604.00727",
+  "title": "Character-Level Question Answering with Attention",
+  "questions": [
+    {
+      "question": "What word level and character level model baselines are used?",
+      "free_form_answer": "Word-level Memory Neural Networks (MemNNs) proposed in Bordes et al. (2015)",
+      "evidence": [
+        "In our experiments, the Memory Neural Networks (MemNNs) proposed in babidataset serve as the baselines. For training, in addition to the 76K questions in the training set, the MemNNs use 3K training questions from WebQuestions BIBREF27 , 15M paraphrases from WikiAnswers BIBREF2 , and 11M and 12M automatically generated questions from the KB for the FB2M and FB5M settings, respectively. In contrast, our models are trained only on the 76K questions in the training set.",
+        "We evaluate the proposed model on the SimpleQuestions dataset BIBREF0 . The dataset consists of 108,442 single-relation questions and their corresponding (topic entity, predicate, answer entity) triples from Freebase. It is split into 75,910 train, 10,845 validation, and 21,687 test questions. Only 10,843 of the 45,335 unique words in entity aliases and 886 out of 1,034 unique predicates in the test set were present in the train set. For the proposed dataset, there are two evaluation settings, called FB2M and FB5M, respectively. The former uses a KB for candidate generation which is a subset of Freebase and contains 2M entities, while the latter uses subset of Freebase with 5M entities."
+      ],
+      "highlighted_evidence": [
+        "In our experiments, the Memory Neural Networks (MemNNs) proposed in babidataset serve as the baselines. For training, in addition to the 76K questions in the training set, the MemNNs use 3K training questions from WebQuestions BIBREF27 , 15M paraphrases from WikiAnswers BIBREF2 , and 11M and 12M automatically generated questions from the KB for the FB2M and FB5M settings, respectively. ",
+        "For the proposed dataset, there are two evaluation settings, called FB2M and FB5M, respectively. The former uses a KB for candidate generation which is a subset of Freebase and contains 2M entities, while the latter uses subset of Freebase with 5M entities."
+      ]
+    }
+  ]
+}

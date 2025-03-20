@@ -1,0 +1,26 @@
+{
+  "paper_id": "1605.04278",
+  "title": "Universal Dependencies for Learner English",
+  "questions": [
+    {
+      "question": "How do they think this treebank will support research on second language acquisition?",
+      "free_form_answer": "It will improve tagging and parsing performance, syntax based grammatical error correction.",
+      "evidence": [
+        "Finally, a corpus that is annotated with both grammatical errors and syntactic dependencies paves the way for empirical investigation of the relation between grammaticality and syntax. Understanding this relation is vital for improving tagging and parsing performance on learner language BIBREF8 , syntax based grammatical error correction BIBREF9 , BIBREF10 , and many other fundamental challenges in NLP. In this work, we take the first step in this direction by benchmarking tagging and parsing accuracy on our dataset under different training regimes, and obtaining several estimates for the impact of grammatical errors on these tasks."
+      ],
+      "highlighted_evidence": [
+        "Finally, a corpus that is annotated with both grammatical errors and syntactic dependencies paves the way for empirical investigation of the relation between grammaticality and syntax. Understanding this relation is vital for improving tagging and parsing performance on learner language BIBREF8 , syntax based grammatical error correction BIBREF9 , BIBREF10 , and many other fundamental challenges in NLP. "
+      ]
+    },
+    {
+      "question": "How long is the dataset?",
+      "free_form_answer": "5124",
+      "evidence": [
+        "The TLE currently contains 5,124 sentences (97,681 tokens) with POS tag and dependency annotations in the English Universal Dependencies (UD) formalism BIBREF2 , BIBREF3 . The sentences were obtained from the FCE corpus BIBREF1 , a collection of upper intermediate English learner essays, containing error annotations with 75 error categories BIBREF7 . Sentence level segmentation was performed using an adaptation of the NLTK sentence tokenizer. Under-segmented sentences were split further manually. Word level tokenization was generated using the Stanford PTB word tokenizer."
+      ],
+      "highlighted_evidence": [
+        "The TLE currently contains 5,124 sentences (97,681 tokens) with POS tag and dependency annotations in the English Universal Dependencies (UD) formalism BIBREF2 , BIBREF3 . "
+      ]
+    }
+  ]
+}

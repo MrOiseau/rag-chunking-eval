@@ -1,0 +1,21 @@
+{
+  "paper_id": "1908.06493",
+  "title": "TwistBytes -- Hierarchical Classification at GermEval 2019: walking the fine line (of recall and precision)",
+  "questions": [
+    {
+      "question": "What does post-processing do to the output?",
+      "free_form_answer": "Set treshold  for prediction.",
+      "evidence": [
+        "Many classifiers can predict a score or confidence about the prediction. Turning this score into the prediction is usually performed by setting a threshold, such as 0 and 0.5, so labels which have a score assigned greater than that are assigned to the sample. This might be not the optimal threshold in the multi-label classification setup and there are many approaches to set it (BIBREF9). Although these methods concentrate in the sample or label, we have had good results with a much more general approach.",
+        "As described in BIBREF1, Read and Pfahringer BIBREF10 introduce a method (referred hereinafter to as LCA) to estimate the threshold globally. Their method chooses the threshold that minimizes the difference between the label cardinality of the training set and the predicted set.",
+        "where $LCard(D_T)$ denotes the label cardinality of training set and $LCard(H_t(D_S))$ the label cardinality of the predictions on test set if $t$ was applied as the threshold. For that the predictions need to be normalized to unity. We also tested this method not for the label cardinality over all samples and labels but only labelwise. In our implementation, the scores of the SVM were not normalized, which produced slightly different results from a normalized approach.",
+        "For the HMC subtask B, we used a simple threshold based on the results obtained for LCA. Especially, using multiple models per node could cause a different scaling."
+      ],
+      "highlighted_evidence": [
+        "Many classifiers can predict a score or confidence about the prediction. Turning this score into the prediction is usually performed by setting a threshold, such as 0 and 0.5, so labels which have a score assigned greater than that are assigned to the sample. This might be not the optimal threshold in the multi-label classification setup and there are many approaches to set it (BIBREF9). Although these methods concentrate in the sample or label, we have had good results with a much more general approach.\n\nAs described in BIBREF1, Read and Pfahringer BIBREF10 introduce a method (referred hereinafter to as LCA) to estimate the threshold globally. Their method chooses the threshold that minimizes the difference between the label cardinality of the training set and the predicted set.",
+        " We also tested this method not for the label cardinality over all samples and labels but only labelwise. ",
+        "For the HMC subtask B, we used a simple threshold based on the results obtained for LCA. Especially, using multiple models per node could cause a different scaling."
+      ]
+    }
+  ]
+}

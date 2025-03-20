@@ -1,0 +1,16 @@
+{
+  "paper_id": "1805.11937",
+  "title": "Character-Level Models versus Morphology in Semantic Role Labeling",
+  "questions": [
+    {
+      "question": "What morphological typologies are considered?",
+      "free_form_answer": "agglutinative and fusional",
+      "evidence": [
+        "Throughout this paper, our aim was to gain insights on how models perform on different languages rather than scoring the highest F1. For this reason, we used a model that can be considered small when compared to recent neural SRL models and avoided parameter search. However, we wonder how the models behave when given a larger network. To answer this question, we trained char3 and oracle models with more layers for two fusional languages (Spanish, Catalan), and two agglutinative languages (Finnish, Turkish). The results given in Table 6 clearly shows that model complexity provides relatively more benefit to morphological models. This indicates that morphological signals help to extract more complex linguistic features that have semantic clues."
+      ],
+      "highlighted_evidence": [
+        "Throughout this paper, our aim was to gain insights on how models perform on different languages rather than scoring the highest F1. For this reason, we used a model that can be considered small when compared to recent neural SRL models and avoided parameter search. However, we wonder how the models behave when given a larger network. To answer this question, we trained char3 and oracle models with more layers for two fusional languages (Spanish, Catalan), and two agglutinative languages (Finnish, Turkish). "
+      ]
+    }
+  ]
+}

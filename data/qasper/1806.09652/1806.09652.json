@@ -1,0 +1,16 @@
+{
+  "paper_id": "1806.09652",
+  "title": "Neural Machine Translation for Low Resource Languages using Bilingual Lexicon Induced from Comparable Corpora",
+  "questions": [
+    {
+      "question": "Which models do they use for phrase-based SMT?",
+      "free_form_answer": "Phrase-Based SMT systems were trained using Moses, grow-diag-final-and heuristic were used for extracting phrases,  and lexicalised reordering and Batch MIRA for tuning.",
+      "evidence": [
+        "As the dataset for training the machine translation systems, we used high precision sentences extracted with greedy decoding, by ranking the sentence-pairs on their translation probabilities. Phrase-Based SMT systems were trained using Moses BIBREF14 . We used the grow-diag-final-and heuristic for extracting phrases, lexicalised reordering and Batch MIRA BIBREF15 for tuning (the default parameters on Moses). We trained 5-gram language models with Kneser-Ney smoothing using KenLM BIBREF16 . With these parameters, we trained SMT systems for en\u2013ta and en\u2013hi language pairs, with and without the use of extracted parallel sentence pairs."
+      ],
+      "highlighted_evidence": [
+        "Phrase-Based SMT systems were trained using Moses BIBREF14 . We used the grow-diag-final-and heuristic for extracting phrases, lexicalised reordering and Batch MIRA BIBREF15 for tuning (the default parameters on Moses). "
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "1904.09131",
+  "title": "OpenTapioca: Lightweight Entity Linking for Wikidata",
+  "questions": [
+    {
+      "question": "What is the accuracy of this model compared to sota?",
+      "free_form_answer": "The model improves the state of the art performance for the ISTEX dataset (F1 micro: 0.870, F1 macro: 0.858) and for the Microposts 2016 dataset (F1 micro:  0.087).",
+      "evidence": [
+        "FLOAT SELECTED: Figure 2: F1 scores on test datasets"
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: Figure 2: F1 scores on test datasets"
+      ]
+    },
+    {
+      "question": "What is the accuracy of this model compared to sota?",
+      "free_form_answer": "The micro and macro f1-scores of this model are 0.482 and 0.399 on the AIDA-CoNLL dataset, 0.087 and 0.515 on the Microposts 2016 dataset, 0.870 and 0.858 on the ISTEX-1000 dataset, 0.335 and 0.310 on the RSS-500 dataset",
+      "evidence": [
+        "FLOAT SELECTED: Figure 2: F1 scores on test datasets"
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: Figure 2: F1 scores on test datasets"
+      ]
+    },
+    {
+      "question": "What is the accuracy of this model compared to sota?",
+      "free_form_answer": "The accuracy ",
+      "evidence": [
+        "We review the main differences between Wikidata and static knowledge bases extracted from Wikipedia, and analyze their implactions for entity linking. We illustrate these differences by building a simple entity linker, OpenTapioca, which only uses data from Wikidata, and show that it is competitive with other systems with access to larger data sources for some tasks. OpenTapioca can be trained easily from a Wikidata dump only, and can be efficiently kept up to date in real time as Wikidata evolves. We also propose tools to adapt existing entity linking datasets to Wikidata, and offer a new entity linking dataset, consisting of affiliation strings extracted from research articles."
+      ],
+      "highlighted_evidence": [
+        "We illustrate these differences by building a simple entity linker, OpenTapioca, which only uses data from Wikidata, and show that it is competitive with other systems with access to larger data sources for some tasks. OpenTapioca can be trained easily from a Wikidata dump only, and can be efficiently kept up to date in real time as Wikidata evolves."
+      ]
+    }
+  ]
+}

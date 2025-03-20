@@ -1,0 +1,18 @@
+{
+  "paper_id": "1808.04314",
+  "title": "Comparing morphological complexity of Spanish, Otomi and Nahuatl",
+  "questions": [
+    {
+      "question": "what is the practical application for this paper?",
+      "free_form_answer": "Improve existing NLP methods. Improve linguistic analysis. Measure impact of word normalization tools.",
+      "evidence": [
+        "Morphology deals with the internal structure of words BIBREF0 , BIBREF1 . Languages of the world have different word production processes. Morphological richness vary from language to language, depending on their linguistic typology. In natural language processing (NLP), taking into account the morphological complexity inherent to each language could be important for improving or adapting the existing methods, since the amount of semantic and grammatical information encoded at the word level, may vary significantly from language to language.",
+        "Additionally, most of the previous works do not analyze how the complexity changes when different types of morphological normalization procedures are applied to a language, e.g., lemmatization, stemming, morphological segmentation. This information could be useful for linguistic analysis and for measuring the impact of different word form normalization tools depending of the language. In this work, we analyze how the type-token relationship changes using different types of morphological normalization techniques."
+      ],
+      "highlighted_evidence": [
+        "In natural language processing (NLP), taking into account the morphological complexity inherent to each language could be important for improving or adapting the existing methods, since the amount of semantic and grammatical information encoded at the word level, may vary significantly from language to language.",
+        "This information could be useful for linguistic analysis and for measuring the impact of different word form normalization tools depending of the language."
+      ]
+    }
+  ]
+}

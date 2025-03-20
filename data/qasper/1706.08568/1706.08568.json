@@ -1,0 +1,16 @@
+{
+  "paper_id": "1706.08568",
+  "title": "Neural Question Answering at BioASQ 5B",
+  "questions": [
+    {
+      "question": "Are answers in this dataset guaranteed to be substrings of the text? If not, what is the coverage of answers being substrings?",
+      "free_form_answer": "No, the answers can also be summaries or yes/no.",
+      "evidence": [
+        "The questions are categorized into different question types: factoid, list, summary and yes/no. Our work concentrates on answering factoid and list questions. For factoid questions, the system's responses are interpreted as a ranked list of answer candidates. They are evaluated using mean-reciprocal rank (MRR). For list questions, the system's responses are interpreted as a set of answers to the list question. Precision and recall are computed by comparing the given answers to the gold-standard answers. F1 score, i.e., the harmonic mean of precision and recall, is used as the official evaluation measure ."
+      ],
+      "highlighted_evidence": [
+        "The questions are categorized into different question types: factoid, list, summary and yes/no."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "paper_id": "1704.06851",
+  "title": "Affect-LM: A Neural Language Model for Customizable Affective Text Generation",
+  "questions": [
+    {
+      "question": "How to extract affect attributes from the sentence?",
+      "free_form_answer": "Using a dictionary of emotional words, LIWC, they perform keyword spotting.",
+      "evidence": [
+        "Motivated by these advances in neural language modeling and affective analysis of text, in this paper we propose a model for representation and generation of emotional text, which we call the Affect-LM. Our model is trained on conversational speech corpora, common in language modeling for speech recognition applications BIBREF10 . Figure 1 provides an overview of our Affect-LM and its ability to generate emotionally colored conversational text in a number of affect categories with varying affect strengths. While these parameters can be manually tuned to generate conversational text, the affect category can also be automatically inferred from preceding context words. Specifically for model training, the affect category is derived from features generated using keyword spotting from a dictionary of emotional words, such as the LIWC (Linguistic Inquiry and Word Count) tool BIBREF11 . Our primary research questions in this paper are:",
+        "Our proposed model learns a generative model of the next word $w_t$ conditioned not only on the previous words $w_1,w_2,...,w_{t-1}$ but also on the affect category $\\mathbf {e_{t-1}}$ which is additional information about emotional content. During model training, the affect category is inferred from the context data itself. Thus we define a suitable feature extractor which can utilize an affective lexicon to infer emotion in the context. For our experiments, we have utilized the Linguistic Inquiry and Word Count (LIWC) text analysis program for feature extraction through keyword spotting. Introduced by BIBREF11 pennebaker2001linguistic, LIWC is based on a dictionary, where each word is assigned to a predefined LIWC category. The categories are chosen based on their association with social, affective, and cognitive processes. For example, the dictionary word worry is assigned to LIWC category anxiety. In our work, we have utilized all word categories of LIWC corresponding to affective processes: positive emotion, angry, sad, anxious, and negative emotion. Thus the descriptor $\\mathbf {e_{t-1}}$ has five features with each feature denoting presence or absence of a specific emotion, which is obtained by binary thresholding of the features extracted from LIWC. For example, the affective representation of the sentence i will fight in the war is $\\mathbf {e_{t-1}}=$ {\u201csad\":0, \u201cangry\":1, \u201canxiety\":0, \u201cnegative emotion\":1, \u201cpositive emotion\":0}."
+      ],
+      "highlighted_evidence": [
+        "Specifically for model training, the affect category is derived from features generated using keyword spotting from a dictionary of emotional words, such as the LIWC (Linguistic Inquiry and Word Count) tool BIBREF11 . ",
+        "During model training, the affect category is inferred from the context data itself. Thus we define a suitable feature extractor which can utilize an affective lexicon to infer emotion in the context. For our experiments, we have utilized the Linguistic Inquiry and Word Count (LIWC) text analysis program for feature extraction through keyword spotting. ",
+        "In our work, we have utilized all word categories of LIWC corresponding to affective processes: positive emotion, angry, sad, anxious, and negative emotion. "
+      ]
+    },
+    {
+      "question": "How to extract affect attributes from the sentence?",
+      "free_form_answer": "A sentence is represented by five features that each mark presence or absence of an emotion: positive emotion, angry, sad, anxious, and negative emotion.",
+      "evidence": [
+        "Our proposed model learns a generative model of the next word $w_t$ conditioned not only on the previous words $w_1,w_2,...,w_{t-1}$ but also on the affect category $\\mathbf {e_{t-1}}$ which is additional information about emotional content. During model training, the affect category is inferred from the context data itself. Thus we define a suitable feature extractor which can utilize an affective lexicon to infer emotion in the context. For our experiments, we have utilized the Linguistic Inquiry and Word Count (LIWC) text analysis program for feature extraction through keyword spotting. Introduced by BIBREF11 pennebaker2001linguistic, LIWC is based on a dictionary, where each word is assigned to a predefined LIWC category. The categories are chosen based on their association with social, affective, and cognitive processes. For example, the dictionary word worry is assigned to LIWC category anxiety. In our work, we have utilized all word categories of LIWC corresponding to affective processes: positive emotion, angry, sad, anxious, and negative emotion. Thus the descriptor $\\mathbf {e_{t-1}}$ has five features with each feature denoting presence or absence of a specific emotion, which is obtained by binary thresholding of the features extracted from LIWC. For example, the affective representation of the sentence i will fight in the war is $\\mathbf {e_{t-1}}=$ {\u201csad\":0, \u201cangry\":1, \u201canxiety\":0, \u201cnegative emotion\":1, \u201cpositive emotion\":0}."
+      ],
+      "highlighted_evidence": [
+        "In our work, we have utilized all word categories of LIWC corresponding to affective processes: positive emotion, angry, sad, anxious, and negative emotion. Thus the descriptor $\\mathbf {e_{t-1}}$ has five features with each feature denoting presence or absence of a specific emotion, which is obtained by binary thresholding of the features extracted from LIWC. "
+      ]
+    }
+  ]
+}

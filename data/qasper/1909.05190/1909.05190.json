@@ -1,0 +1,35 @@
+{
+  "paper_id": "1909.05190",
+  "title": "Event Representation Learning Enhanced with External Commonsense Knowledge",
+  "questions": [
+    {
+      "question": "How is the event prediction task evaluated?",
+      "free_form_answer": "replacing the event embeddings on SGNN and running it on the MCNC dataset",
+      "evidence": [
+        "Following BIBREF21 (BIBREF21), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset BIBREF2. As SGNN proposed by BIBREF21 (BIBREF21) achieved state-of-the-art performances for this task, we use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings."
+      ],
+      "highlighted_evidence": [
+        "Following BIBREF21 (BIBREF21), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset BIBREF2.",
+        "As SGNN proposed by BIBREF21 (BIBREF21) achieved state-of-the-art performances for this task, we use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings."
+      ]
+    },
+    {
+      "question": "What are the datasets used in the paper?",
+      "free_form_answer": "ATOMIC, New York Times Gigaword, an unreleased extension of the dataset by BIBREF5, MCNC",
+      "evidence": [
+        "One challenge for incorporating intents into event embeddings is that we should have a large-scale labeled dataset, which annotated the event and its actor's intents. Recently, BIBREF6 P18-1043 and BIBREF7 sap2018atomic released such valuable commonsense knowledge dataset (ATOMIC), which consists of 25,000 event phrases covering a diverse range of daily-life events and situations. For example, given an event \u201cPersonX drinks coffee in the morning\u201d, the dataset labels PersonX's likely intent is \u201cPersonX wants to stay awake\u201d.",
+        "We use the New York Times Gigaword Corpus (LDC2007T07) for pre-training event embeddings. Event triples are extracted based on the Open Information Extraction technology BIBREF15. We initialize the word embedding layer with 100 dimensional pre-trained GloVe vectors BIBREF8, and fine-tune initialized word vectors during our model training. We use Adagrad BIBREF16 for optimizing the parameters with initial learning rate 0.001 and batch size 128.",
+        "We first follow BIBREF5 (BIBREF5) evaluating our proposed approach on the hard similarity task. The goal of this task is that similar events should be close to each other in the same vector space, while dissimilar events should be far away with each other. To this end, BIBREF5 (BIBREF5) created two types of event pairs, one with events that should be close to each other but have very little lexical overlap (e.g., police catch robber / authorities apprehend suspect), and another with events that should be farther apart but have high overlap (e.g., police catch robber / police catch disease).",
+        "The labeled dataset contains 230 event pairs (115 pairs each of similar and dissimilar types). Three different annotators were asked to give the similarity/dissimilarity rankings, of which only those the annotators agreed upon completely were kept. For each event representation learning method, we obtain the cosine similarity score of the pairs, and report the fraction of cases where the similar pair receives a higher cosine value than the dissimilar pair (we use Accuracy $\\in [0,1]$ denoting it). To evaluate the robustness of our approach, we extend this dataset to 1,000 event pairs (similar and dissimilar events each account for 50%), and we will release this dataset to the public.",
+        "Following BIBREF21 (BIBREF21), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset BIBREF2. As SGNN proposed by BIBREF21 (BIBREF21) achieved state-of-the-art performances for this task, we use the framework of SGNN, and only replace their input event embeddings with our intent and sentiment-enhanced event embeddings."
+      ],
+      "highlighted_evidence": [
+        "One challenge for incorporating intents into event embeddings is that we should have a large-scale labeled dataset, which annotated the event and its actor's intents. Recently, BIBREF6 P18-1043 and BIBREF7 sap2018atomic released such valuable commonsense knowledge dataset (ATOMIC), which consists of 25,000 event phrases covering a diverse range of daily-life events and situations.",
+        "We use the New York Times Gigaword Corpus (LDC2007T07) for pre-training event embeddings.",
+        "To this end, BIBREF5 (BIBREF5) created two types of event pairs, one with events that should be close to each other but have very little lexical overlap (e.g., police catch robber / authorities apprehend suspect), and another with events that should be farther apart but have high overlap (e.g., police catch robber / police catch disease).",
+        "To evaluate the robustness of our approach, we extend this dataset to 1,000 event pairs (similar and dissimilar events each account for 50%), and we will release this dataset to the public.",
+        "Following BIBREF21 (BIBREF21), we evaluate on the standard multiple choice narrative cloze (MCNC) dataset BIBREF2."
+      ]
+    }
+  ]
+}

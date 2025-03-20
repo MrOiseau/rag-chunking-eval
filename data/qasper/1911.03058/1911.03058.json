@@ -1,0 +1,16 @@
+{
+  "paper_id": "1911.03058",
+  "title": "Should All Cross-Lingual Embeddings Speak English?",
+  "questions": [
+    {
+      "question": "What is triangulation?",
+      "free_form_answer": "Answer with content missing: (Chapter 3) The concept can be easily explained with an example, visualized in Figure 1. Consider the Portuguese (Pt) word trabalho which, according to the MUSE Pt\u2013En dictionary, has the words job and work as possible En translations. In turn, these two En words can be translated to 4 and 5 Czech (Cs) words respectively. By utilizing the transitive property (which translation should exhibit) we can identify the set of 7 possible Cs translations for the Pt word trabalho.",
+      "evidence": [
+        "Conclusion"
+      ],
+      "highlighted_evidence": [
+        "Conclusion"
+      ]
+    }
+  ]
+}

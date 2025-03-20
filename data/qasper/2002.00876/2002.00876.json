@@ -1,0 +1,19 @@
+{
+  "paper_id": "2002.00876",
+  "title": "Torch-Struct: Deep Structured Prediction Library",
+  "questions": [
+    {
+      "question": "Is this library implemented into Torch or is framework agnostic?",
+      "free_form_answer": "It uses deep learning framework (pytorch)",
+      "evidence": [
+        "With this challenge in mind, we introduce Torch-Struct with three specific contributions:",
+        "Modularity: models are represented as distributions with a standard flexible API integrated into a deep learning framework.",
+        "Completeness: a broad array of classical algorithms are implemented and new models can easily be added in Python.",
+        "Efficiency: implementations target computational/memory efficiency for GPUs and the backend includes extensions for optimization."
+      ],
+      "highlighted_evidence": [
+        "With this challenge in mind, we introduce Torch-Struct with three specific contributions:\n\nModularity: models are represented as distributions with a standard flexible API integrated into a deep learning framework.\n\nCompleteness: a broad array of classical algorithms are implemented and new models can easily be added in Python.\n\nEfficiency: implementations target computational/memory efficiency for GPUs and the backend includes extensions for optimization."
+      ]
+    }
+  ]
+}

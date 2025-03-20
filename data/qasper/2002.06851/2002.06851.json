@@ -1,0 +1,16 @@
+{
+  "paper_id": "2002.06851",
+  "title": "GameWikiSum: a Novel Large Multi-Document Summarization Dataset",
+  "questions": [
+    {
+      "question": "What is the size of this dataset?",
+      "free_form_answer": "14652",
+      "evidence": [
+        "In contrast, we propose a novel domain-specific dataset containing $14\\,652$ samples, based on professional video game reviews obtained via Metacritic and gameplay sections from Wikipedia. By using Metacritic reviews in addition to Wikipedia articles, we benefit from a number of factors. First, the set of aspects used to assess a game is limited and consequently, reviews share redundancy. Second, because they are written by professional journalists, reviews tend to be in-depth and of high-quality. Additionally, when a video game is released, journalists have an incentive to write a complete review and publish it online as soon as possible to draw the attention of potential customers and increase the revenue of their website BIBREF0. Therefore, several reviews for the same product become quickly available and the first version of the corresponding Wikipedia page is usually made available shortly after. Lastly, reviews and Wikipedia pages are available in multiple languages, which opens up the possibility for multilingual multi-document summarization."
+      ],
+      "highlighted_evidence": [
+        "In contrast, we propose a novel domain-specific dataset containing $14\\,652$ samples, based on professional video game reviews obtained via Metacritic and gameplay sections from Wikipedia. "
+      ]
+    }
+  ]
+}

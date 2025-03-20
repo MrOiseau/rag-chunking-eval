@@ -1,0 +1,17 @@
+{
+  "paper_id": "1912.05238",
+  "title": "BERT has a Moral Compass: Improvements of ethical and moral values of machines",
+  "questions": [
+    {
+      "question": "How is moral bias measured?",
+      "free_form_answer": "Answer with content missing: (formula 1) bias(q, a, b) = cos(a, q) \u2212 cos(b, q)\nBias is calculated as substraction of cosine similarities of question and some answer for two opposite answers.",
+      "evidence": [
+        "Analogous to word embeddings, sentence embeddings, e.g. the Universal Sentence Encoder BIBREF8 and Sentence-BERT BIBREF6, allow one to calculate the cosine similarity of various different sentences, as for instance the similarity of a question and the corresponding answer. The more appropriate a specific answer is to a given question, the stronger is its cosine similarity expected to be. When considering two opposite answers, it is therefore possible to determine a bias value:",
+        "where $\\vec{q}$ is the vector representation of the question and $\\vec{a}$ and $\\vec{b}$ the representations of the two answers/choices. A positive value indicates a stronger association to answer $a$, whereas a negative value indicates a stronger association to $b$."
+      ],
+      "highlighted_evidence": [
+        "Analogous to word embeddings, sentence embeddings, e.g. the Universal Sentence Encoder BIBREF8 and Sentence-BERT BIBREF6, allow one to calculate the cosine similarity of various different sentences, as for instance the similarity of a question and the corresponding answer. The more appropriate a specific answer is to a given question, the stronger is its cosine similarity expected to be. When considering two opposite answers, it is therefore possible to determine a bias value:\n\nwhere $\\vec{q}$ is the vector representation of the question and $\\vec{a}$ and $\\vec{b}$ the representations of the two answers/choices."
+      ]
+    }
+  ]
+}

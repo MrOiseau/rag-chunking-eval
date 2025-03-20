@@ -1,0 +1,26 @@
+{
+  "paper_id": "1806.03125",
+  "title": "Text Classification based on Word Subspace with Term-Frequency",
+  "questions": [
+    {
+      "question": "Which dataset has been used in this work?",
+      "free_form_answer": "The Reuters-8 dataset (with stop words removed)",
+      "evidence": [
+        "In this section we describe the experiments performed to demonstrate the validity of our proposed method and its extension. We used the Reuters-8 dataset without stop words from BIBREF27 aiming at single-label classification, which is a preprocessed format of the Reuters-21578. Words in the texts were considered as they appeared, without performing stemming or typo correction. This database has eight different classes with the number of samples varying from 51 to over 3000 documents, as can be seen in Table 1 ."
+      ],
+      "highlighted_evidence": [
+        "We used the Reuters-8 dataset without stop words from BIBREF27 aiming at single-label classification, which is a preprocessed format of the Reuters-21578. "
+      ]
+    },
+    {
+      "question": "What can word subspace represent?",
+      "free_form_answer": "Word vectors, usually in the context of others within the same class",
+      "evidence": [
+        "To tackle this problem, we introduce the novel concept of word subspace. It is mathematically defined as a low dimensional linear subspace in a word vector space with high dimensionality. Given that words from texts of the same class belong to the same context, it is possible to model word vectors of each class as word subspaces and efficiently compare them in terms of similarity by using canonical angles between the word subspaces. Through this representation, most of the variability of the class is retained. Consequently, a word subspace can effectively and compactly represent the context of the corresponding text. We achieve this framework through the mutual subspace method (MSM) BIBREF9 ."
+      ],
+      "highlighted_evidence": [
+        "Given that words from texts of the same class belong to the same context, it is possible to model word vectors of each class as word subspaces and efficiently compare them in terms of similarity by using canonical angles between the word subspaces. "
+      ]
+    }
+  ]
+}

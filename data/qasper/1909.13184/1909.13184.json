@@ -1,0 +1,16 @@
+{
+  "paper_id": "1909.13184",
+  "title": "Towards Automatic Bot Detection in Twitter for Health-related Tasks",
+  "questions": [
+    {
+      "question": "How can an existing bot detection system by customized for health-related research?",
+      "free_form_answer": "An existing bot detection score for each user  can be used as a feature in training",
+      "evidence": [
+        "We used the 8262 \"bot\" and \"non-bot\" users in experiments to train and evaluate three classification systems. We split the users into $80\\%$ (training) and $20\\%$ (test) sets, stratified based on the distribution of \"bot\" and \"non-bot\" users. The training set includes $61,160,686$ tweets posted by 6610 users, and the held-out test set includes $15,703,735$ tweets posted by 1652 users. First, we evaluated Botometer on our held-out test set. Botometer is a publicly available bot detection system designed for political dot detection. It outputs a score between 0 and 1 for a user, representing the likelihood that a user is a bot. Second, we used the Botometer score for each user as a feature in training a gradient boosting classifier which is a decision tree-based ensemble machine learning algorithm with gradient boosting BIBREF23 and can be used to address class imbalance. To adapt the Botometer scores to our binary classification task, we set the threshold to $0.47$, based on performing 5-fold cross validation over the training set. To further address the class imbalance, we used the Synthetic Minority Over-sampling Technique (SMOTE)BIBREF24 to create artificial instances of \"bot\" users in the training set. We also performed 5-fold cross validation over the training set to optimize parameters for the classifier; we used exponential as the loss function, set the number of estimators to 200, and set the learning rate to $0.1$. Third, we used the classifier with an extended set of features that are not used by Botometer. Based on our manual annotation, we consider the following features to be potentially informative for distinguishing \"bot\" and \"non-bot\" users in health-related data:"
+      ],
+      "highlighted_evidence": [
+        "First, we evaluated Botometer on our held-out test set. Botometer is a publicly available bot detection system designed for political dot detection. It outputs a score between 0 and 1 for a user, representing the likelihood that a user is a bot. Second, we used the Botometer score for each user as a feature in training a gradient boosting classifier which is a decision tree-based ensemble machine learning algorithm with gradient boosting BIBREF23 and can be used to address class imbalance. "
+      ]
+    }
+  ]
+}

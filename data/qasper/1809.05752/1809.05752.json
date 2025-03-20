@@ -1,0 +1,16 @@
+{
+  "paper_id": "1809.05752",
+  "title": "Analysis of Risk Factor Domains in Psychosis Patient Health Records",
+  "questions": [
+    {
+      "question": "What additional features are proposed for future work?",
+      "free_form_answer": "distinguishing between clinically positive and negative phenomena within each risk factor domain and accounting for structured data collected on the target cohort",
+      "evidence": [
+        "Our current feature set for training a machine learning classifier is relatively small, consisting of paragraph domain scores, bag-of-words, length of stay, and number of previous admissions, but we intend to factor in many additional features that extend beyond the scope of the present study. These include a deeper analysis of clinical narratives in EHRs: our next task will be to extend our EHR data pipeline by distinguishing between clinically positive and negative phenomena within each risk factor domain. This will involve a series of annotation tasks that will allow us to generate lexicon-based and corpus-based sentiment analysis tools. We can then use these clinical sentiment scores to generate a gradient of patient improvement or deterioration over time."
+      ],
+      "highlighted_evidence": [
+        "Our current feature set for training a machine learning classifier is relatively small, consisting of paragraph domain scores, bag-of-words, length of stay, and number of previous admissions, but we intend to factor in many additional features that extend beyond the scope of the present study. These include a deeper analysis of clinical narratives in EHRs: our next task will be to extend our EHR data pipeline by distinguishing between clinically positive and negative phenomena within each risk factor domain. This will involve a series of annotation tasks that will allow us to generate lexicon-based and corpus-based sentiment analysis tools. We can then use these clinical sentiment scores to generate a gradient of patient improvement or deterioration over time."
+      ]
+    }
+  ]
+}

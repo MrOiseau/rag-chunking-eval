@@ -1,0 +1,18 @@
+{
+  "paper_id": "1811.04791",
+  "title": "Multilingual and Unsupervised Subword Modeling for Zero-Resource Languages",
+  "questions": [
+    {
+      "question": "With how many languages do they experiment in the multilingual setup?",
+      "free_form_answer": "16",
+      "evidence": [
+        "We picked another 10 languages (different from the target languages described in Section SECREF7 ) with a combined 198.3 hours of speech from the GlobalPhone corpus. We consider these as high-resource languages, for which transcriptions are available to train a supervised asr system. The languages and dataset sizes are listed in Table TABREF16 . We also use the English wsj corpus BIBREF35 which is comparable to the GlobalPhone corpus. It contains a total of 81 hours of speech, which we either use in its entirety or from which we use a 15 hour subset; this allows us to compare the effect of increasing the amount of data for one language with training on similar amounts of data but from different languages.",
+        "We use the GlobalPhone corpus of speech read from news articles BIBREF20 . We chose 6 languages from different language families as zero-resource languages on which we evaluate the new feature representations. That means our models do not have any access to the transcriptions of the training data, although transcriptions still need to be available to run the evaluation. The selected languages and dataset sizes are shown in Table TABREF8 . Each GlobalPhone language has recordings from around 100 speakers, with 80% of these in the training sets and no speaker overlap between training, development, and test sets."
+      ],
+      "highlighted_evidence": [
+        "We picked another 10 languages (different from the target languages described in Section SECREF7 ) with a combined 198.3 hours of speech from the GlobalPhone corpus. We consider these as high-resource languages, for which transcriptions are available to train a supervised asr system. ",
+        "We chose 6 languages from different language families as zero-resource languages on which we evaluate the new feature representations."
+      ]
+    }
+  ]
+}

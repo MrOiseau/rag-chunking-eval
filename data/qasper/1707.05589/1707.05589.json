@@ -1,0 +1,16 @@
+{
+  "paper_id": "1707.05589",
+  "title": "On the State of the Art of Evaluation in Neural Language Models",
+  "questions": [
+    {
+      "question": "what architectures were reevaluated?",
+      "free_form_answer": "Answer with content missing: (Architecture section missing) The Long Short-Term Memory, Recurrent Highway Network and NAS",
+      "evidence": [
+        "Our focus is on three recurrent architectures:"
+      ],
+      "highlighted_evidence": [
+        "Our focus is on three recurrent architectures:"
+      ]
+    }
+  ]
+}

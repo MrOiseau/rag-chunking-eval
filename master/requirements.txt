@@ -1,0 +1,12 @@
+
+datasets
+langchain_community
+sentence-transformers
+langchain
+langchain-huggingface
+langchain-chroma
+nltk
+chromadb
+langchain-openai
+scikit-learn
+numpy

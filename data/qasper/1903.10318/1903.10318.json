@@ -1,0 +1,16 @@
+{
+  "paper_id": "1903.10318",
+  "title": "Fine-tune BERT for Extractive Summarization",
+  "questions": [
+    {
+      "question": "Do they encode sentences separately or together?",
+      "free_form_answer": "Together",
+      "evidence": [
+        "As illustrated in Figure 1, we insert a [CLS] token before each sentence and a [SEP] token after each sentence. In vanilla BERT, The [CLS] is used as a symbol to aggregate features from one sentence or a pair of sentences. We modify the model by using multiple [CLS] symbols to get features for sentences ascending the symbol."
+      ],
+      "highlighted_evidence": [
+        "As illustrated in Figure 1, we insert a [CLS] token before each sentence and a [SEP] token after each sentence."
+      ]
+    }
+  ]
+}

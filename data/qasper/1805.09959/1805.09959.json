@@ -1,0 +1,29 @@
+{
+  "paper_id": "1805.09959",
+  "title": "A Sentiment Analysis of Breast Cancer Treatment Experiences and Healthcare Perceptions Across Twitter",
+  "questions": [
+    {
+      "question": "How were breast cancer related posts compiled from the Twitter streaming API?",
+      "free_form_answer": "By using  keywords `breast' AND `cancer' in tweet collecting process. \n",
+      "evidence": [
+        "We collected tweets from two distinct Spritzer endpoints from September 15th, 2016 through December 9th, 2017. The primary feed for the analysis collected INLINEFORM0 million tweets containing the keywords `breast' AND `cancer'. See Figure FIGREF2 for detailed Twitter frequency statistics along with the user activity distribution. Our secondary feed searched just for the keyword `cancer' which served as a comparison ( INLINEFORM1 million tweets, see Appendix 1), and helped us collect additional tweets relevant to cancer from patients. The numeric account ID provided in tweets helps to distinguish high frequency tweeting entities."
+      ],
+      "highlighted_evidence": [
+        "The primary feed for the analysis collected INLINEFORM0 million tweets containing the keywords `breast' AND `cancer'. "
+      ]
+    },
+    {
+      "question": "What machine learning and NLP methods were used to sift tweets relevant to breast cancer experiences?",
+      "free_form_answer": "ML  logistic regression classifier combined with a Convolutional Neural Network (CNN) to identify self-reported diagnostic tweets.\nNLP methods:  tweet conversion to numeric word vector,  removing tweets containing hyperlinks, removing \"retweets\", removing all tweets containing horoscope indicators,  lowercasing and  removing punctuation.",
+      "evidence": [
+        "Sentence classification combines natural language processing (NLP) with machine learning to identify trends in sentence structure, BIBREF14 , BIBREF15 . Each tweet is converted to a numeric word vector in order to identify distinguishing features by training an NLP classifier on a validated set of relevant tweets. The classifier acts as a tool to sift through ads, news, and comments not related to patients. Our scheme combines a logistic regression classifier, BIBREF16 , with a Convolutional Neural Network (CNN), BIBREF17 , BIBREF18 , to identify self-reported diagnostic tweets.",
+        "It is important to be wary of automated accounts (e.g. bots, spam) whose large output of tweets pollute relevant organic content, BIBREF19 , and can distort sentiment analyses, BIBREF20 . Prior to applying sentence classification, we removed tweets containing hyperlinks to remove automated content (some organic content is necessarily lost with this strict constraint).",
+        "Our goal was to analyze content authored only by patients. To help ensure this outcome we removed posts containing a URL for classification, BIBREF19 . Twitter allows users to spread content from other users via `retweets'. We also removed these posts prior to classification to isolate tweets authored by patients. We also accounted for non-relevant astrological content by removing all tweets containing any of the following horoscope indicators: `astrology',`zodiac',`astronomy',`horoscope',`aquarius',`pisces',`aries',`taurus',`leo',`virgo',`libra', and `scorpio'. We preprocessed tweets by lowercasing and removing punctuation. We also only analyzed tweets for which Twitter had identified `en' for the language English."
+      ],
+      "highlighted_evidence": [
+        "Sentence classification combines natural language processing (NLP) with machine learning to identify trends in sentence structure, BIBREF14 , BIBREF15 . Each tweet is converted to a numeric word vector in order to identify distinguishing features by training an NLP classifier on a validated set of relevant tweets. The classifier acts as a tool to sift through ads, news, and comments not related to patients. Our scheme combines a logistic regression classifier, BIBREF16 , with a Convolutional Neural Network (CNN), BIBREF17 , BIBREF18 , to identify self-reported diagnostic tweets.\n\nIt is important to be wary of automated accounts (e.g. bots, spam) whose large output of tweets pollute relevant organic content, BIBREF19 , and can distort sentiment analyses, BIBREF20 . Prior to applying sentence classification, we removed tweets containing hyperlinks to remove automated content (some organic content is necessarily lost with this strict constraint).",
+        "Twitter allows users to spread content from other users via `retweets'. We also removed these posts prior to classification to isolate tweets authored by patients. We also accounted for non-relevant astrological content by removing all tweets containing any of the following horoscope indicators: `astrology',`zodiac',`astronomy',`horoscope',`aquarius',`pisces',`aries',`taurus',`leo',`virgo',`libra', and `scorpio'. We preprocessed tweets by lowercasing and removing punctuation. We also only analyzed tweets for which Twitter had identified `en' for the language English."
+      ]
+    }
+  ]
+}

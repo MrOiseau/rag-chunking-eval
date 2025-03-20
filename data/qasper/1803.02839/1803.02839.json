@@ -1,0 +1,28 @@
+{
+  "paper_id": "1803.02839",
+  "title": "The emergent algebraic structure of RNNs and embeddings in NLP",
+  "questions": [
+    {
+      "question": "What text classification task is considered?",
+      "free_form_answer": "To classify a text as belonging to one of the ten possible classes.",
+      "evidence": [
+        "We trained word embeddings and a uni-directional GRU connected to a dense layer end-to-end for text classification on a set of scraped tweets using cross-entropy as the loss function. End-to-end training was selected to impose as few heuristic constraints on the system as possible. Each tweet was tokenized using NLTK TweetTokenizer and classified as one of 10 potential accounts from which it may have originated. The accounts were chosen based on the distinct topics each is known to typically tweet about. Tokens that occurred fewer than 5 times were disregarded in the model. The model was trained on 22106 tweets over 10 epochs, while 5526 were reserved for validation and testing sets (2763 each). The network demonstrated an insensitivity to the initialization of the hidden state, so, for algebraic considerations, INLINEFORM0 was chosen for hidden dimension of INLINEFORM1 . A graph of the network is shown in Fig.( FIGREF13 )."
+      ],
+      "highlighted_evidence": [
+        "Each tweet was tokenized using NLTK TweetTokenizer and classified as one of 10 potential accounts from which it may have originated. The accounts were chosen based on the distinct topics each is known to typically tweet about."
+      ]
+    },
+    {
+      "question": "What novel class of recurrent-like networks is proposed?",
+      "free_form_answer": "A network, whose learned functions satisfy a certain equation. The  network contains RNN cells with either nested internal memories or dependencies that extend temporally beyond the immediately previous hidden state.",
+      "evidence": [
+        "First, we propose a class of recurrent-like neural networks for NLP tasks that satisfy the differential equation DISPLAYFORM0",
+        "where DISPLAYFORM0",
+        "and where INLINEFORM0 and INLINEFORM1 are learned functions. INLINEFORM2 corresponds to traditional RNNs, with INLINEFORM3 . For INLINEFORM4 , this takes the form of RNN cells with either nested internal memories or dependencies that extend temporally beyond the immediately previous hidden state. In particular, using INLINEFORM5 for sentence generation is the topic of a manuscript presently in preparation."
+      ],
+      "highlighted_evidence": [
+        "First, we propose a class of recurrent-like neural networks for NLP tasks that satisfy the differential equation DISPLAYFORM0\n\nwhere DISPLAYFORM0\n\nand where INLINEFORM0 and INLINEFORM1 are learned functions. INLINEFORM2 corresponds to traditional RNNs, with INLINEFORM3 . For INLINEFORM4 , this takes the form of RNN cells with either nested internal memories or dependencies that extend temporally beyond the immediately previous hidden state. "
+      ]
+    }
+  ]
+}

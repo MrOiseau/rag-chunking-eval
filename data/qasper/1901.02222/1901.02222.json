@@ -1,0 +1,16 @@
+{
+  "paper_id": "1901.02222",
+  "title": "Multi-turn Inference Matching Network for Natural Language Inference",
+  "questions": [
+    {
+      "question": "Which matching features do they employ?",
+      "free_form_answer": "Matching features from matching sentences from various perspectives.",
+      "evidence": [
+        "In this paper, we propose the MIMN model for NLI task. Our model introduces a multi-turns inference mechanism to process multi-perspective matching features. Furthermore, the model employs the memory mechanism to carry proceeding inference information. In each turn, the inference is based on the current matching feature and previous memory. Experimental results on SNLI dataset show that the MIMN model is on par with the state-of-the-art models. Moreover, our model achieves new state-of-the-art results on the MPE and the SCITAL datasets. Experimental results prove that the MIMN model can extract important information from multiple premises for the final judgment. And the model is good at handling the relationships of entailment and contradiction."
+      ],
+      "highlighted_evidence": [
+        "Our model introduces a multi-turns inference mechanism to process multi-perspective matching features. "
+      ]
+    }
+  ]
+}

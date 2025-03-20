@@ -1,0 +1,26 @@
+{
+  "paper_id": "1811.01734",
+  "title": "Transductive Learning with String Kernels for Cross-Domain Text Classification",
+  "questions": [
+    {
+      "question": "How long is the dataset?",
+      "free_form_answer": "8000",
+      "evidence": [
+        "Data set. For the cross-domain polarity classification experiments, we use the second version of Multi-Domain Sentiment Dataset BIBREF0 . The data set contains Amazon product reviews of four different domains: Books (B), DVDs (D), Electronics (E) and Kitchen appliances (K). Reviews contain star ratings (from 1 to 5) which are converted into binary labels as follows: reviews rated with more than 3 stars are labeled as positive, and those with less than 3 stars as negative. In each domain, there are 1000 positive and 1000 negative reviews."
+      ],
+      "highlighted_evidence": [
+        "For the cross-domain polarity classification experiments, we use the second version of Multi-Domain Sentiment Dataset BIBREF0 . The data set contains Amazon product reviews of four different domains: Books (B), DVDs (D), Electronics (E) and Kitchen appliances (K). Reviews contain star ratings (from 1 to 5) which are converted into binary labels as follows: reviews rated with more than 3 stars are labeled as positive, and those with less than 3 stars as negative. In each domain, there are 1000 positive and 1000 negative reviews."
+      ]
+    },
+    {
+      "question": "What is a string kernel?",
+      "free_form_answer": "String kernel is a technique that uses character n-grams to measure the similarity of strings",
+      "evidence": [
+        "In recent years, methods based on string kernels have demonstrated remarkable performance in various text classification tasks BIBREF35 , BIBREF36 , BIBREF22 , BIBREF19 , BIBREF10 , BIBREF17 , BIBREF26 . String kernels represent a way of using information at the character level by measuring the similarity of strings through character n-grams. Lodhi et al. BIBREF35 used string kernels for document categorization, obtaining very good results. String kernels were also successfully used in authorship identification BIBREF22 . More recently, various combinations of string kernels reached state-of-the-art accuracy rates in native language identification BIBREF19 and Arabic dialect identification BIBREF17 . Interestingly, string kernels have been used in cross-domain settings without any domain adaptation, obtaining impressive results. For instance, Ionescu et al. BIBREF19 have employed string kernels in a cross-corpus (and implicitly cross-domain) native language identification experiment, improving the state-of-the-art accuracy by a remarkable INLINEFORM0 . Gim\u00e9nez-P\u00e9rez et al. BIBREF10 have used string kernels for single-source and multi-source polarity classification. Remarkably, they obtain state-of-the-art performance without using knowledge from the target domain, which indicates that string kernels provide robust results in the cross-domain setting without any domain adaptation. Ionescu et al. BIBREF17 obtained the best performance in the Arabic Dialect Identification Shared Task of the 2017 VarDial Evaluation Campaign BIBREF37 , with an improvement of INLINEFORM1 over the second-best method. It is important to note that the training and the test speech samples prepared for the shared task were recorded in different setups BIBREF37 , or in other words, the training and the test sets are drawn from different distributions. Different from all these recent approaches BIBREF19 , BIBREF10 , BIBREF17 , we use unlabeled data from the target domain to significantly increase the performance of string kernels in cross-domain text classification, particularly in English polarity classification."
+      ],
+      "highlighted_evidence": [
+        "String kernels represent a way of using information at the character level by measuring the similarity of strings through character n-grams."
+      ]
+    }
+  ]
+}

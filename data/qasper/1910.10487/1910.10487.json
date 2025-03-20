@@ -1,0 +1,20 @@
+{
+  "paper_id": "1910.10487",
+  "title": "Memory-Augmented Recurrent Networks for Dialogue Coherence",
+  "questions": [
+    {
+      "question": "What is possible future improvement for proposed method/s?",
+      "free_form_answer": "Strategies to reduce number of parameters, space out calls over larger time intervals and use context dependent embeddings.",
+      "evidence": [
+        "Now we will discuss the memory-augmented D-NTMS architecture. The memory-augmented architecture improved performance above the baseline sequence-to-sequence architecture. As such, it is likely that the memory modules were able to store valuable information about the conversation, and were able to draw on that information during the decoder phase. One drawback of the memory enhanced model is that training was significantly slower. For this reason, model simplification is required in the future to make it more practical. In addition, the NTM has a lot of parameters and some of them may be redundant or damaging. In the DNTM-S system, we may not need to access the NTM at each step of decoding either. Instead, it can be accessed in some intervals of time steps, and the output is used for all steps within the interval.",
+        "Of all models, the HRED architecture utilized pre-trained GloVe vectors as an initialization for its input word embedding matrix. This feature likely improved performance of the HRED in comparison to other systems, such as the vanilla sequence-to-sequence. However, in separate experiments, GloVe vectors only managed a 5% coverage of all words in the vocabulary. This low number is likely due to the fact that the Ubuntu Dialogues corpus contains heavy terminology from the Ubuntu operating system and user packages. In addition, the Ubuntu conversations contain a significant amount of typos and grammar errors, further complicating analysis. Context-dependent embeddings such as ElMo BIBREF15 may help alleviate this issue, as character-level RNNs can better deal with typos and detect sub word-level elements such morphemes.",
+        "We establish memory modules as a valid means of storing relevant information for dialogue coherence, and show improved performance when compared to the sequence-to-sequence baseline and vanilla language model. We establish that augmenting these baseline architectures with NTM memory modules can provide a moderate bump in performance, at the cost of slower training speeds. The memory-augmented architectures described above should be modified for increased computational speed and a reduced number of parameters, in order to make each memory architecture more feasible to incorporate into future dialogue designs."
+      ],
+      "highlighted_evidence": [
+        "One drawback of the memory enhanced model is that training was significantly slower. For this reason, model simplification is required in the future to make it more practical. In addition, the NTM has a lot of parameters and some of them may be redundant or damaging. In the DNTM-S system, we may not need to access the NTM at each step of decoding either. Instead, it can be accessed in some intervals of time steps, and the output is used for all steps within the interval.",
+        " Context-dependent embeddings such as ElMo BIBREF15 may help alleviate this issue, as character-level RNNs can better deal with typos and detect sub word-level elements such morphemes.",
+        "The memory-augmented architectures described above should be modified for increased computational speed and a reduced number of parameters, in order to make each memory architecture more feasible to incorporate into future dialogue designs."
+      ]
+    }
+  ]
+}

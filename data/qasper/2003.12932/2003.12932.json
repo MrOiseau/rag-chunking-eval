@@ -1,0 +1,32 @@
+{
+  "paper_id": "2003.12932",
+  "title": "User Generated Data: Achilles' heel of BERT",
+  "questions": [
+    {
+      "question": "What is the performance change of the textual semantic similarity task when no error and maximum errors (noise) are present?",
+      "free_form_answer": "10 Epochs: pearson-Spearman correlation  drops  60 points when error increase by 20%\n50 Epochs: pearson-Spearman correlation  drops  55 points when error increase by 20%",
+      "evidence": [
+        "Figure FIGREF12stsa and FIGREF12stsb shows Pearson-Spearman correlation vs % of error for textual semantic similarity on STS-B dataset after fine tuning for 10 and 50 epochs respectively.",
+        "FLOAT SELECTED: Figure 5: Pearson-Spearman correlation vs % of error for textual semantic similarity on STS-B dataset"
+      ],
+      "highlighted_evidence": [
+        "Figure FIGREF12stsa and FIGREF12stsb shows Pearson-Spearman correlation vs % of error for textual semantic similarity on STS-B dataset after fine tuning for 10 and 50 epochs respectively.",
+        "FLOAT SELECTED: Figure 5: Pearson-Spearman correlation vs % of error for textual semantic similarity on STS-B dataset"
+      ]
+    },
+    {
+      "question": "Which sentiment analysis data set has a larger performance drop when a 10% error is introduced?",
+      "free_form_answer": "SST-2 dataset",
+      "evidence": [
+        "Let us discuss the results from the above mentioned experiments. We show the plots of accuracy vs noise for each of the tasks. For IMDB, we fine tune the model for the sentiment analysis task. We plot F1 score vs % of error, as shown in Figure FIGREF6. Figure FIGREF6imdba shows the performance after fine tuning for 10 epochs, while Figure FIGREF6imdbb shows the performance after fine tuning for 50 epochs.",
+        "Similarly, Figure FIGREF9ssta and Figure FIGREF9sstb) shows F1 score vs % of error for Sentiment analysis on SST-2 dataset after fine tuning for 10 and 50 epochs respectively.",
+        "FLOAT SELECTED: Figure 3: F1 score vs % of error for Sentiment analysis on IMDB dataset"
+      ],
+      "highlighted_evidence": [
+        "We show the plots of accuracy vs noise for each of the tasks. For IMDB, we fine tune the model for the sentiment analysis task. We plot F1 score vs % of error, as shown in Figure FIGREF6. Figure FIGREF6imdba shows the performance after fine tuning for 10 epochs, while Figure FIGREF6imdbb shows the performance after fine tuning for 50 epochs.",
+        "Similarly, Figure FIGREF9ssta and Figure FIGREF9sstb) shows F1 score vs % of error for Sentiment analysis on SST-2 dataset after fine tuning for 10 and 50 epochs respectively.",
+        "FLOAT SELECTED: Figure 3: F1 score vs % of error for Sentiment analysis on IMDB dataset"
+      ]
+    }
+  ]
+}

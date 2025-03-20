@@ -1,0 +1,16 @@
+{
+  "paper_id": "2001.05493",
+  "title": "A Unified System for Aggression Identification in English Code-Mixed and Uni-Lingual Texts",
+  "questions": [
+    {
+      "question": "How have the differences in communication styles between Twitter and Facebook increase the complexity of the problem?",
+      "free_form_answer": "Systems do not perform well both in Facebook and Twitter texts",
+      "evidence": [
+        "Most of the above-discussed systems either shows high performance on (a) Twitter dataset or (b) Facebook dataset (given in the TRAC-2018), but not on both English code-mixed datasets. This may be due to the text style or level of complexities of both datasets. So, we concentrated to develop a robust system for English code-mixed texts, and uni-lingual texts, which can also handle different writing styles. Our approach is based on three main ideas:"
+      ],
+      "highlighted_evidence": [
+        "Most of the above-discussed systems either shows high performance on (a) Twitter dataset or (b) Facebook dataset (given in the TRAC-2018), but not on both English code-mixed datasets. This may be due to the text style or level of complexities of both datasets."
+      ]
+    }
+  ]
+}

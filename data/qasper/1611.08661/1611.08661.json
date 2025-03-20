@@ -1,0 +1,16 @@
+{
+  "paper_id": "1611.08661",
+  "title": "Knowledge Graph Representation with Jointly Structural and Textual Encoding",
+  "questions": [
+    {
+      "question": "What neural models are used to encode the text?",
+      "free_form_answer": "NBOW, LSTM, attentive LSTM",
+      "evidence": [
+        "In this paper, we use three encoders (NBOW, LSTM and attentive LSTM) to model the text descriptions."
+      ],
+      "highlighted_evidence": [
+        "In this paper, we use three encoders (NBOW, LSTM and attentive LSTM) to model the text descriptions."
+      ]
+    }
+  ]
+}

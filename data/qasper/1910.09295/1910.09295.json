@@ -1,0 +1,28 @@
+{
+  "paper_id": "1910.09295",
+  "title": "Localization of Fake News Detection via Multitask Transfer Learning",
+  "questions": [
+    {
+      "question": "What is the source of the dataset?",
+      "free_form_answer": "Online sites tagged as fake news site by Verafiles and NUJP and news website in the Philippines, including Pilipino Star Ngayon, Abante, and Bandera",
+      "evidence": [
+        "We work with a dataset composed of 3,206 news articles, each labeled real or fake, with a perfect 50/50 split between 1,603 real and fake articles, respectively. Fake articles were sourced from online sites that were tagged as fake news sites by the non-profit independent media fact-checking organization Verafiles and the National Union of Journalists in the Philippines (NUJP). Real articles were sourced from mainstream news websites in the Philippines, including Pilipino Star Ngayon, Abante, and Bandera."
+      ],
+      "highlighted_evidence": [
+        "We work with a dataset composed of 3,206 news articles, each labeled real or fake, with a perfect 50/50 split between 1,603 real and fake articles, respectively. Fake articles were sourced from online sites that were tagged as fake news sites by the non-profit independent media fact-checking organization Verafiles and the National Union of Journalists in the Philippines (NUJP). Real articles were sourced from mainstream news websites in the Philippines, including Pilipino Star Ngayon, Abante, and Bandera."
+      ]
+    },
+    {
+      "question": "What were the baselines?",
+      "free_form_answer": "Siamese neural network consisting of an embedding layer, a LSTM layer and a feed-forward layer with ReLU activations",
+      "evidence": [
+        "We use a siamese neural network, shown to perform state-of-the-art few-shot learning BIBREF11, as our baseline model.",
+        "We modify the original to account for sequential data, with each twin composed of an embedding layer, a Long-Short Term Memory (LSTM) BIBREF12 layer, and a feed-forward layer with Rectified Linear Unit (ReLU) activations."
+      ],
+      "highlighted_evidence": [
+        "We use a siamese neural network, shown to perform state-of-the-art few-shot learning BIBREF11, as our baseline model.",
+        "We modify the original to account for sequential data, with each twin composed of an embedding layer, a Long-Short Term Memory (LSTM) BIBREF12 layer, and a feed-forward layer with Rectified Linear Unit (ReLU) activations."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "paper_id": "1703.02507",
+  "title": "Unsupervised Learning of Sentence Embeddings using Compositional n-Gram Features",
+  "questions": [
+    {
+      "question": "What metric is used to measure performance?",
+      "free_form_answer": "Accuracy and F1 score for supervised tasks, Pearson's and Spearman's correlation for unsupervised tasks",
+      "evidence": [
+        "We use a standard set of supervised as well as unsupervised benchmark tasks from the literature to evaluate our trained models, following BIBREF16 . The breadth of tasks allows to fairly measure generalization to a wide area of different domains, testing the general-purpose quality (universality) of all competing sentence embeddings. For downstream supervised evaluations, sentence embeddings are combined with logistic regression to predict target labels. In the unsupervised evaluation for sentence similarity, correlation of the cosine similarity between two embeddings is compared to human annotators.",
+        "Downstream Supervised Evaluation. Sentence embeddings are evaluated for various supervised classification tasks as follows. We evaluate paraphrase identification (MSRP) BIBREF25 , classification of movie review sentiment (MR) BIBREF26 , product reviews (CR) BIBREF27 , subjectivity classification (SUBJ) BIBREF28 , opinion polarity (MPQA) BIBREF29 and question type classification (TREC) BIBREF30 . To classify, we use the code provided by BIBREF22 in the same manner as in BIBREF16 . For the MSRP dataset, containing pairs of sentences INLINEFORM0 with associated paraphrase label, we generate feature vectors by concatenating their Sent2Vec representations INLINEFORM1 with the component-wise product INLINEFORM2 . The predefined training split is used to tune the L2 penalty parameter using cross-validation and the accuracy and F1 scores are computed on the test set. For the remaining 5 datasets, Sent2Vec embeddings are inferred from input sentences and directly fed to a logistic regression classifier. Accuracy scores are obtained using 10-fold cross-validation for the MR, CR, SUBJ and MPQA datasets. For those datasets nested cross-validation is used to tune the L2 penalty. For the TREC dataset, as for the MRSP dataset, the L2 penalty is tuned on the predefined train split using 10-fold cross-validation, and the accuracy is computed on the test set.",
+        "Unsupervised Similarity Evaluation. We perform unsupervised evaluation of the learnt sentence embeddings using the sentence cosine similarity, on the STS 2014 BIBREF31 and SICK 2014 BIBREF32 datasets. These similarity scores are compared to the gold-standard human judgements using Pearson's INLINEFORM0 BIBREF33 and Spearman's INLINEFORM1 BIBREF34 correlation scores. The SICK dataset consists of about 10,000 sentence pairs along with relatedness scores of the pairs. The STS 2014 dataset contains 3,770 pairs, divided into six different categories on the basis of the origin of sentences/phrases, namely Twitter, headlines, news, forum, WordNet and images."
+      ],
+      "highlighted_evidence": [
+        "We use a standard set of supervised as well as unsupervised benchmark tasks from the literature to evaluate our trained models, following BIBREF16",
+        "Sentence embeddings are evaluated for various supervised classification tasks as follows.",
+        "The predefined training split is used to tune the L2 penalty parameter using cross-validation and the accuracy and F1 scores are computed on the test set. ",
+        "We perform unsupervised evaluation of the learnt sentence embeddings using the sentence cosine similarity, on the STS 2014 BIBREF31 and SICK 2014 BIBREF32 datasets. These similarity scores are compared to the gold-standard human judgements using Pearson's INLINEFORM0 BIBREF33 and Spearman's INLINEFORM1 BIBREF34 correlation scores. "
+      ]
+    }
+  ]
+}

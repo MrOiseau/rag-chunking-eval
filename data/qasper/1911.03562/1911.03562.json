@@ -1,0 +1,36 @@
+{
+  "paper_id": "1911.03562",
+  "title": "The State of NLP Literature: A Diachronic Analysis of the ACL Anthology",
+  "questions": [
+    {
+      "question": "Which 3 NLP areas are cited the most?",
+      "free_form_answer": "machine translation, statistical machine, sentiment analysis",
+      "evidence": [
+        "FLOAT SELECTED: Figure 33 The most cited areas of research along with citation statistics split by gender of the first authors of corresponding papers."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: Figure 33 The most cited areas of research along with citation statistics split by gender of the first authors of corresponding papers."
+      ]
+    },
+    {
+      "question": "Which journal and conference are cited the most in recent years?",
+      "free_form_answer": "CL Journal and EMNLP conference",
+      "evidence": [
+        "FLOAT SELECTED: Figure 25 Average citations for papers published 1965\u20132016 (left side) and 2010\u20132016 (right side), grouped by venue and paper type."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: Figure 25 Average citations for papers published 1965\u20132016 (left side) and 2010\u20132016 (right side), grouped by venue and paper type."
+      ]
+    },
+    {
+      "question": "Which 5 languages appear most frequently in AA paper titles?",
+      "free_form_answer": "English, Chinese, French, Japanese and Arabic",
+      "evidence": [
+        "FLOAT SELECTED: Figure 11 A treemap of the 122 languages arranged alphabetically and shaded such that languages that appear more often in AA paper titles have a darker shade of green."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: Figure 11 A treemap of the 122 languages arranged alphabetically and shaded such that languages that appear more often in AA paper titles have a darker shade of green."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "paper_id": "1909.02764",
+  "title": "Towards Multimodal Emotion Recognition in German Speech Events in Cars using Transfer Learning",
+  "questions": [
+    {
+      "question": "What is the baseline method for the task?",
+      "free_form_answer": "For the emotion recognition from text they use described neural network as baseline.\nFor audio and face there is no baseline.",
+      "evidence": [
+        "For the emotion recognition from text, we manually transcribe all utterances of our AMMER study. To exploit existing and available data sets which are larger than the AMMER data set, we develop a transfer learning approach. We use a neural network with an embedding layer (frozen weights, pre-trained on Common Crawl and Wikipedia BIBREF36), a bidirectional LSTM BIBREF37, and two dense layers followed by a soft max output layer. This setup is inspired by BIBREF38. We use a dropout rate of 0.3 in all layers and optimize with Adam BIBREF39 with a learning rate of $10^{-5}$ (These parameters are the same for all further experiments). We build on top of the Keras library with the TensorFlow backend. We consider this setup our baseline model."
+      ],
+      "highlighted_evidence": [
+        "For the emotion recognition from text, we manually transcribe all utterances of our AMMER study. To exploit existing and available data sets which are larger than the AMMER data set, we develop a transfer learning approach. We use a neural network with an embedding layer (frozen weights, pre-trained on Common Crawl and Wikipedia BIBREF36), a bidirectional LSTM BIBREF37, and two dense layers followed by a soft max output layer. This setup is inspired by BIBREF38. We use a dropout rate of 0.3 in all layers and optimize with Adam BIBREF39 with a learning rate of $10^{-5}$ (These parameters are the same for all further experiments). We build on top of the Keras library with the TensorFlow backend. We consider this setup our baseline model."
+      ]
+    }
+  ]
+}

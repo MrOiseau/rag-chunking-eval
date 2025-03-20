@@ -1,0 +1,18 @@
+{
+  "paper_id": "1803.08419",
+  "title": "The Rapidly Changing Landscape of Conversational Agents",
+  "questions": [
+    {
+      "question": "What are the limitations of the currently used quantitative metrics? e.g. why are they not 'good'?",
+      "free_form_answer": "The metrics correlate very weakly with human judgements, word-overlap metrics require too many ground-truth reposnses and embedding-based metrics are insufficiently complex for modeling sentence-level compositionality in dialogue",
+      "evidence": [
+        "Evaluating conversational agents is an open research problem in the field. With the inclusion of emotion component in the modern conversation agents, evaluating such models has become even more complex.The current evaluation methods like perplexity and BLEU score are not good enough and correlate very weakly with human judgments. In the paper by Liu et al, 2016 BIBREF31 , the authors discuss about how not to evaluate the dialogue system. They provide quantitative and qualitative results highlighting specific weaknesses in existing metrics and provide recommendations for the future development of better automatic evaluation metrics for dialogue systems.",
+        "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses. Similarly, the metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality in dialogue."
+      ],
+      "highlighted_evidence": [
+        "The current evaluation methods like perplexity and BLEU score are not good enough and correlate very weakly with human judgments. ",
+        "According to them, the metrics (like Kiros et al, 2015 BIBREF32 ) that are based on distributed sentence representations hold the most promise for the future. It is because word-overlap metrics like BLEU simply require too many ground-truth responses to find a significant match for a reasonable response due to the high diversity of dialogue responses. Similarly, the metrics that are embedding-based consist of basic averages of vectors obtained through distributional semantics and so they are also insufficiently complex for modeling sentence-level compositionality in dialogue."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "paper_id": "1909.08211",
+  "title": "Modeling Conversation Structure and Temporal Dynamics for Jointly Predicting Rumor Stance and Veracity",
+  "questions": [
+    {
+      "question": "How do they split the dataset when training and evaluating their models?",
+      "free_form_answer": "SemEval-2017 task 8  dataset includes 325 rumorous conversation threads, and has been split into training, development and test sets. \nThe PHEME dataset provides 2,402 conversations covering nine events - in each fold, one event's conversations are used for testing, and all the rest events are used for training. ",
+      "evidence": [
+        "The first is SemEval-2017 task 8 BIBREF16 dataset. It includes 325 rumorous conversation threads, and has been split into training, development and test sets. These threads cover ten events, and two events of that only appear in the test set. This dataset is used to evaluate both stance classification and veracity prediction tasks.",
+        "The second is PHEME dataset BIBREF48. It provides 2,402 conversations covering nine events. Following previous work, we conduct leave-one-event-out cross-validation: in each fold, one event's conversations are used for testing, and all the rest events are used for training. The evaluation metric on this dataset is computed after integrating the outputs of all nine folds. Note that only a subset of this dataset has stance labels, and all conversations in this subset are already contained in SemEval-2017 task 8 dataset. Thus, PHEME dataset is used to evaluate veracity prediction task."
+      ],
+      "highlighted_evidence": [
+        "The first is SemEval-2017 task 8 BIBREF16 dataset. It includes 325 rumorous conversation threads, and has been split into training, development and test sets. These threads cover ten events, and two events of that only appear in the test set. This dataset is used to evaluate both stance classification and veracity prediction tasks.\n\nThe second is PHEME dataset BIBREF48. It provides 2,402 conversations covering nine events. Following previous work, we conduct leave-one-event-out cross-validation: in each fold, one event's conversations are used for testing, and all the rest events are used for training. The evaluation metric on this dataset is computed after integrating the outputs of all nine folds. Note that only a subset of this dataset has stance labels, and all conversations in this subset are already contained in SemEval-2017 task 8 dataset. Thus, PHEME dataset is used to evaluate veracity prediction task."
+      ]
+    },
+    {
+      "question": "How do they split the dataset when training and evaluating their models?",
+      "free_form_answer": "SemEval-2017 task 8 dataset is split into train, development and test sets. Two events go into test set and eight events go to train and development sets for every thread in the dataset. PHEME dataset is split as leave-one-event-out cross-validation. One event goes to test and the rest of events go to training set for each conversation. Nine folds are created",
+      "evidence": [
+        "The first is SemEval-2017 task 8 BIBREF16 dataset. It includes 325 rumorous conversation threads, and has been split into training, development and test sets. These threads cover ten events, and two events of that only appear in the test set. This dataset is used to evaluate both stance classification and veracity prediction tasks.",
+        "The second is PHEME dataset BIBREF48. It provides 2,402 conversations covering nine events. Following previous work, we conduct leave-one-event-out cross-validation: in each fold, one event's conversations are used for testing, and all the rest events are used for training. The evaluation metric on this dataset is computed after integrating the outputs of all nine folds. Note that only a subset of this dataset has stance labels, and all conversations in this subset are already contained in SemEval-2017 task 8 dataset. Thus, PHEME dataset is used to evaluate veracity prediction task."
+      ],
+      "highlighted_evidence": [
+        "The first is SemEval-2017 task 8 BIBREF16 dataset. It includes 325 rumorous conversation threads, and has been split into training, development and test sets. These threads cover ten events, and two events of that only appear in the test set.",
+        "The second is PHEME dataset BIBREF48. It provides 2,402 conversations covering nine events. Following previous work, we conduct leave-one-event-out cross-validation: in each fold, one event's conversations are used for testing, and all the rest events are used for training. The evaluation metric on this dataset is computed after integrating the outputs of all nine folds."
+      ]
+    }
+  ]
+}

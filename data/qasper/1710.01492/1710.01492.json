@@ -1,0 +1,18 @@
+{
+  "paper_id": "1710.01492",
+  "title": "Semantic Sentiment Analysis of Twitter Data",
+  "questions": [
+    {
+      "question": "What difficulties does sentiment analysis on Twitter have, compared to sentiment analysis in other domains?",
+      "free_form_answer": "Tweets noisy nature, use of creative spelling and punctuation, misspellings, slang, new words, URLs, and genre-specific terminology and abbreviations, short (length limited) text",
+      "evidence": [
+        "Pre-processing. Tweets are subject to standard preprocessing steps for text such as tokenization, stemming, lemmatization, stop-word removal, and part-of-speech tagging. Moreover, due to their noisy nature, they are also processed using some Twitter-specific techniques such as substitution/removal of URLs, of user mentions, of hashtags, and of emoticons, spelling correction, elongation normalization, abbreviation lookup, punctuation removal, detection of amplifiers and diminishers, negation scope detection, etc. For this, one typically uses Twitter-specific NLP tools such as part-of-speech and named entity taggers, syntactic parsers, etc. BIBREF47 , BIBREF48 , BIBREF49 .",
+        "Despite all these opportunities, the rise of social media has also presented new challenges for natural language processing (NLP) applications, which had largely relied on NLP tools tuned for formal text genres such as newswire, and thus were not readily applicable to the informal language and style of social media. That language proved to be quite challenging with its use of creative spelling and punctuation, misspellings, slang, new words, URLs, and genre-specific terminology and abbreviations, e.g., RT for re-tweet and #hashtags. In addition to the genre difference, there is also a difference in length: social media messages are generally short, often length-limited by design as in Twitter, i.e., a sentence or a headline rather than a full document. How to handle such challenges has only recently been the subject of thorough research BIBREF2 , BIBREF3 , BIBREF4 , BIBREF5 , BIBREF6 , BIBREF7 , BIBREF8 , BIBREF9 ."
+      ],
+      "highlighted_evidence": [
+        " Moreover, due to their noisy nature, they are also processed using some Twitter-specific techniques such as substitution/removal of URLs, of user mentions, of hashtags, and of emoticons, spelling correction, elongation normalization, abbreviation lookup, punctuation removal, detection of amplifiers and diminishers, negation scope detection, etc.",
+        "That language proved to be quite challenging with its use of creative spelling and punctuation, misspellings, slang, new words, URLs, and genre-specific terminology and abbreviations, e.g., RT for re-tweet and #hashtags. In addition to the genre difference, there is also a difference in length: social media messages are generally short, often length-limited by design as in Twitter, i.e., a sentence or a headline rather than a full document"
+      ]
+    }
+  ]
+}

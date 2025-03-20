@@ -1,0 +1,16 @@
+{
+  "paper_id": "1909.00107",
+  "title": "Behavior Gated Language Models",
+  "questions": [
+    {
+      "question": "How is module that analyzes behavioral state trained?",
+      "free_form_answer": "pre-trained to identify the presence of behavior from a sequence of word using the Couples Therapy Corpus",
+      "evidence": [
+        "The behavior model was implemented using an RNN with LSTM units and trained with the Couples Therapy Corpus. Out of the 33 behavioral codes included in the corpus we applied the behaviors Acceptance, Blame, Negativity, Positivity, and Sadness to train our models. This is motivated from previous works which showed good separability in these behaviors as well as being easy to interpret. The behavior model is pre-trained to identify the presence of each behavior from a sequence of words using a multi-label classification scheme. The pre-trained portion of the behavior model was implemented using a single layer RNN with LSTM units with dimension size 50."
+      ],
+      "highlighted_evidence": [
+        "The behavior model was implemented using an RNN with LSTM units and trained with the Couples Therapy Corpus. Out of the 33 behavioral codes included in the corpus we applied the behaviors Acceptance, Blame, Negativity, Positivity, and Sadness to train our models. This is motivated from previous works which showed good separability in these behaviors as well as being easy to interpret. The behavior model is pre-trained to identify the presence of each behavior from a sequence of words using a multi-label classification scheme. The pre-trained portion of the behavior model was implemented using a single layer RNN with LSTM units with dimension size 50."
+      ]
+    }
+  ]
+}

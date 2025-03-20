@@ -1,0 +1,38 @@
+{
+  "paper_id": "1911.09709",
+  "title": "Automatically Neutralizing Subjective Bias in Text",
+  "questions": [
+    {
+      "question": "Which works better according to human evaluation, the concurrent or the modular system?",
+      "free_form_answer": "They are equal",
+      "evidence": [
+        "Results on WNC are presented in Table TABREF35. In addition to methods from the literature we include (1) a BERT-based system which simply predicts and deletes subjective words, and (2) a system which predicts replacements (including deletion) for subjective words directly from their BERT embeddings. All methods appear to successfully reduce bias according to the human evaluators. However, many methods appear to lack fluency. Adding a token-weighted loss function and pretraining the decoder help the model's coherence according to BLEU and accuracy. Adding the detector (modular) or a BERT encoder (concurrent) provide additional benefits. The proposed models retain the strong effects of systems from the literature while also producing target-level fluency on average. Our results suggest there is no clear winner between our two proposed systems. modular is better at reducing bias and has higher accuracy, while concurrent produces more fluent responses, preserves meaning better, and has higher BLEU."
+      ],
+      "highlighted_evidence": [
+        "Our results suggest there is no clear winner between our two proposed systems. modular is better at reducing bias and has higher accuracy, while concurrent produces more fluent responses, preserves meaning better, and has higher BLEU."
+      ]
+    },
+    {
+      "question": "How is subjective text automatically neutralized?",
+      "free_form_answer": " Identify subjective bias via the method of BIBREF2: using Wikipedia's neutral point of view (NPOV) policy and suggest edits that would make it more neutral.",
+      "evidence": [
+        "This work presents data and algorithms for automatically reducing bias in text. We focus on a particular kind of bias: inappropriate subjectivity (\u201csubjective bias\u201d). Subjective bias occurs when language that should be neutral and fair is skewed by feeling, opinion, or taste (whether consciously or unconsciously). In practice, we identify subjective bias via the method of BIBREF2: using Wikipedia's neutral point of view (NPOV) policy. This policy is a set of principles which includes \u201cavoiding stating opinions as facts\u201d and \u201cpreferring nonjudgemental language\u201d.",
+        "We aim to debias text by suggesting edits that would make it more neutral. This contrasts with prior research which has debiased representations of text by removing dimensions of prejudice from word embeddings BIBREF3, BIBREF4 and the hidden states of predictive models BIBREF5, BIBREF6. To avoid overloading the definition of \u201cdebias,\u201d we refer to our kind of text debiasing as neutralizing that text. Figure FIGREF1 gives an example."
+      ],
+      "highlighted_evidence": [
+        "This work presents data and algorithms for automatically reducing bias in text. We focus on a particular kind of bias: inappropriate subjectivity (\u201csubjective bias\u201d). Subjective bias occurs when language that should be neutral and fair is skewed by feeling, opinion, or taste (whether consciously or unconsciously). In practice, we identify subjective bias via the method of BIBREF2: using Wikipedia's neutral point of view (NPOV) policy. This policy is a set of principles which includes \u201cavoiding stating opinions as facts\u201d and \u201cpreferring nonjudgemental language\u201d.",
+        "We aim to debias text by suggesting edits that would make it more neutral."
+      ]
+    },
+    {
+      "question": "How is subjective text automatically neutralized?",
+      "free_form_answer": "The text is modified to remove the subjective bias while preserve the meaning as much as possible",
+      "evidence": [
+        "We propose the task of neutralizing text, in which the algorithm is given an input sentence and must produce an output sentence whose meaning is as similar as possible to the input but with the subjective bias removed."
+      ],
+      "highlighted_evidence": [
+        "We propose the task of neutralizing text, in which the algorithm is given an input sentence and must produce an output sentence whose meaning is as similar as possible to the input but with the subjective bias removed."
+      ]
+    }
+  ]
+}

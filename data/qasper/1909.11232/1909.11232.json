@@ -1,0 +1,45 @@
+{
+  "paper_id": "1909.11232",
+  "title": "Sign Language Recognition Analysis using Multimodal Data",
+  "questions": [
+    {
+      "question": "What is the sign language recognition task investigated?",
+      "free_form_answer": " American Sign Language recognition ",
+      "evidence": [
+        "We present a deep learning based approach for ASL recognition that leverages skeletal and video data. The proposed model captures the underlying temporal dynamics associated with sign language and also identifies specific hand shape patterns from video data to improve recognition performance. A new data augmentation technique was introduced that allowed the LSTM networks to capture spatial dynamics among joints. Finally, a large public dataset for ASL recognition will be released to the community to spur research in this direction; and bring benefits of digital assistants to the deaf and hard of hearing community. For future research direction, we are looking into the problem of sentence level ASL recognition. We also plan to use other data modality such as wifi signals which can be complimentary to video in sign language recognition."
+      ],
+      "highlighted_evidence": [
+        "We present a deep learning based approach for ASL recognition that leverages skeletal and video data."
+      ]
+    },
+    {
+      "question": "What is the performance of the best model in the sign language recognition task?",
+      "free_form_answer": "Spatial AI-LSTM",
+      "evidence": [
+        "FLOAT SELECTED: TABLE I AVERAGE CROSS SUBJECT (CS) ACCURACY ACROSS ALL TEST SUBJECTS FOR DIFFERENT PROPOSED ARCHITECTURES AND BASELINES. STANDARD DEVIATION ACROSS TEST SUBJECTS\u2019 ACCURACY IS ALSO SHOWN.",
+        "Table TABREF28 shows the comparative results among our proposed architectures and baselines. Overall, we use data from 12 subjects for our experiments which sum up to 13107 sign gesture samples in total. To evaluate model performance on a specific subject (test subject), we adopt cross subject evaluation criteria. Suppose, X is the test subject. We train our networks with all sign samples except those are from subject X. We use subject X's data as test split to evaluate the performance of the networks. Table TABREF28 shows the average test accuracy for all 12 subjects. We can see that 3D CNN network alone performs worse than simpler baselines. But when coupled with AI-LSTM as Max CNN-LSTM, it shows an increase in recognition accuracy by 2% from AI-LSTM alone. This is because some of the signs are confused by the AI-LSTM network because of similar skeletal motion pattern. Incorporating spatial relationship among joints leads to a significant accuracy gain. The Spatial AI-LSTM is trained only on skeletal data but outperforms the combined network by 6%."
+      ],
+      "highlighted_evidence": [
+        "FLOAT SELECTED: TABLE I AVERAGE CROSS SUBJECT (CS) ACCURACY ACROSS ALL TEST SUBJECTS FOR DIFFERENT PROPOSED ARCHITECTURES AND BASELINES. STANDARD DEVIATION ACROSS TEST SUBJECTS\u2019 ACCURACY IS ALSO SHOWN.",
+        "The Spatial AI-LSTM is trained only on skeletal data but outperforms the combined network by 6%."
+      ]
+    },
+    {
+      "question": "What are the deep learning architectures used?",
+      "free_form_answer": "3D CNN, Axis independent LSTM,  spatial axis independent LSTM, and combined network ",
+      "evidence": [
+        "We propose an RNN architecture with a novel spatial data augmentation technique.",
+        "We propose an architecture which uses both RGB and skeletal data to improve recognition accuracy.",
+        "Our Approach ::: 3D Convolutional Neural Network",
+        "Our Approach ::: Axis Independent LSTM",
+        "Our Approach ::: Spatial AI-LSTM"
+      ],
+      "highlighted_evidence": [
+        "We propose an RNN architecture with a novel spatial data augmentation technique.\n\nWe propose an architecture which uses both RGB and skeletal data to improve recognition accuracy.",
+        "Our Approach ::: 3D Convolutional Neural Network",
+        "Our Approach ::: Axis Independent LSTM",
+        "Our Approach ::: Spatial AI-LSTM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "paper_id": "1605.08675",
+  "title": "Boosting Question Answering by Deep Entity Recognition",
+  "questions": [
+    {
+      "question": "How is the data in RAFAEL labelled?",
+      "free_form_answer": "Using a set of annotation tools such as Morfeusz, PANTERA, Spejd, NERF and Liner",
+      "evidence": [
+        "Secondly, texts go through a cascade of annotation tools, enriching it with the following information:",
+        "Morphosyntactic interpretations (sets of tags), using Morfeusz 0.82 BIBREF25 ,",
+        "Tagging (selection of the most probable interpretation), using a transformation-based learning tagger, PANTERA 0.9.1 BIBREF26 ,",
+        "Syntactic groups (possibly nested) with syntactic and semantic heads, using a rule-based shallow parser Spejd 1.3.7 BIBREF27 with a Polish grammar, including improved version of modifications by BIBREF28 , enabling lemmatisation of nominal syntactic groups,",
+        "Named entities, using two available tools: NERF 0.1 BIBREF29 and Liner2 2.3 BIBREF30 ."
+      ],
+      "highlighted_evidence": [
+        "Secondly, texts go through a cascade of annotation tools, enriching it with the following information:\n\nMorphosyntactic interpretations (sets of tags), using Morfeusz 0.82 BIBREF25 ,\n\nTagging (selection of the most probable interpretation), using a transformation-based learning tagger, PANTERA 0.9.1 BIBREF26 ,\n\nSyntactic groups (possibly nested) with syntactic and semantic heads, using a rule-based shallow parser Spejd 1.3.7 BIBREF27 with a Polish grammar, including improved version of modifications by BIBREF28 , enabling lemmatisation of nominal syntactic groups,\n\nNamed entities, using two available tools: NERF 0.1 BIBREF29 and Liner2 2.3 BIBREF30 .\n\n"
+      ]
+    }
+  ]
+}

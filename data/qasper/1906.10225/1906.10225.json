@@ -1,0 +1,26 @@
+{
+  "paper_id": "1906.10225",
+  "title": "Compound Probabilistic Context-Free Grammars for Grammar Induction",
+  "questions": [
+    {
+      "question": "what english datasets were used?",
+      "free_form_answer": "Answer with content missing: (Data section) Penn Treebank (PTB)",
+      "evidence": [
+        "Experimental Setup"
+      ],
+      "highlighted_evidence": [
+        "Experimental Setup"
+      ]
+    },
+    {
+      "question": "which chinese datasets were used?",
+      "free_form_answer": "Answer with content missing: (Data section) Chinese with version 5.1 of the Chinese Penn Treebank (CTB)",
+      "evidence": [
+        "Experimental Setup"
+      ],
+      "highlighted_evidence": [
+        "Experimental Setup"
+      ]
+    }
+  ]
+}

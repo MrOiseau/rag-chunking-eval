@@ -1,0 +1,17 @@
+{
+  "paper_id": "1906.08593",
+  "title": "Conflict as an Inverse of Attention in Sequence Relationship",
+  "questions": [
+    {
+      "question": "Which neural architecture do they use as a base for their attention conflict mechanisms?",
+      "free_form_answer": "GRU-based encoder, interaction block, and classifier consisting of stacked fully-connected layers.",
+      "evidence": [
+        "We create two models both of which constitutes of three main parts: encoder, interaction and classifier and take two sequences as input. Except interaction, all the other parts are exactly identical between the two models. The encoder is shared among the sequences simply uses two stacked GRU layers. The interaction part consists of only attention for one model while for the another one it consists of attention and conflict combined as shown in (eqn.11) . The classifier part is simply stacked fully-connected layers. Figure 3 shows a block diagram of how our model looks like."
+      ],
+      "highlighted_evidence": [
+        "We create two models both of which constitutes of three main parts: encoder, interaction and classifier and take two sequences as input.",
+        "The encoder is shared among the sequences simply uses two stacked GRU layers. The interaction part consists of only attention for one model while for the another one it consists of attention and conflict combined as shown in (eqn.11) . The classifier part is simply stacked fully-connected layers. "
+      ]
+    }
+  ]
+}

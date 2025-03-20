@@ -1,0 +1,16 @@
+{
+  "paper_id": "1709.10367",
+  "title": "Structured Embedding Models for Grouped Data",
+  "questions": [
+    {
+      "question": "What experiments are used to demonstrate the benefits of this approach?",
+      "free_form_answer": "Calculate test log-likelihood on the three considered datasets",
+      "evidence": [
+        "Our contributions are thus as follows. We introduce the sefe model, extending efe to grouped data. We present two techniques to share statistical strength among the embedding vectors, one based on hierarchical modeling and one based on amortization. We carry out a thorough experimental study on two text databases, ArXiv papers by section and U.S. Congressional speeches by home state and political party. Using Poisson embeddings, we study market basket data from a large grocery store, grouped by season. On all three data sets, sefe outperforms efe in terms of held-out log-likelihood. Qualitatively, we demonstrate how sefe discovers which words are used most differently across U.S. states and political parties, and show how word usage changes in different ArXiv disciplines."
+      ],
+      "highlighted_evidence": [
+        "We carry out a thorough experimental study on two text databases, ArXiv papers by section and U.S. Congressional speeches by home state and political party. Using Poisson embeddings, we study market basket data from a large grocery store, grouped by season. On all three data sets, sefe outperforms efe in terms of held-out log-likelihood."
+      ]
+    }
+  ]
+}

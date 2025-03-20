@@ -1,0 +1,30 @@
+{
+  "paper_id": "1707.00110",
+  "title": "Efficient Attention using a Fixed-Size Memory Representation",
+  "questions": [
+    {
+      "question": "Which baseline methods are used?",
+      "free_form_answer": "standard parametrized attention and a non-attention baseline",
+      "evidence": [
+        "Table 1 shows the BLEU scores of our model on different sequence lengths while varying $K$ . This is a study of the trade-off between computational time and representational power. A large $K$ allows us to compute complex source representations, while a $K$ of 1 limits the source representation to a single vector. We can see that performance consistently increases with $K$ up to a point that depends on the data length, with longer sequences requiring more complex representations. The results with and without position encodings are almost identical on the toy data. Our technique learns to fit the data as well as the standard attention mechanism despite having less representational power. Both beat the non-attention baseline by a significant margin.",
+        "All models are implemented using TensorFlow based on the seq2seq implementation of BIBREF15 and trained on a single machine with a Nvidia K40m GPU. We use a 2-layer 256-unit, a bidirectional LSTM BIBREF16 encoder, a 2-layer 256-unit LSTM decoder, and 256-dimensional embeddings. For the attention baseline, we use the standard parametrized attention BIBREF2 . Dropout of 0.2 (0.8 keep probability) is applied to the input of each cell and we optimize using Adam BIBREF17 at a learning rate of 0.0001 and batch size 128. We train for at most 200,000 steps (see Figure 3 for sample learning curves). BLEU scores are calculated on tokenized data using the multi-bleu.perl script in Moses. We decode using beam search with a beam"
+      ],
+      "highlighted_evidence": [
+        "Both beat the non-attention baseline by a significant margin.",
+        "For the attention baseline, we use the standard parametrized attention BIBREF2 ."
+      ]
+    },
+    {
+      "question": "Which datasets are used in experiments?",
+      "free_form_answer": "Sequence Copy Task and WMT'17",
+      "evidence": [
+        "Due to the reduction of computational time complexity we expect our method to yield performance gains especially for longer sequences and tasks where the source can be compactly represented in a fixed-size memory matrix. To investigate the trade-off between speed and performance, we compare our technique to standard models with and without attention on a Sequence Copy Task of varying length like in BIBREF14 . We generated 4 training datasets of 100,000 examples and a validation dataset of 1,000 examples. The vocabulary size was 20. For each dataset, the sequences had lengths randomly chosen between 0 to $L$ , for $L\\in \\lbrace 10, 50, 100, 200\\rbrace $ unique to each dataset.",
+        "Next, we explore if the memory-based attention mechanism is able to fit complex real-world datasets. For this purpose we use 4 large machine translation datasets of WMT'17 on the following language pairs: English-Czech (en-cs, 52M examples), English-German (en-de, 5.9M examples), English-Finish (en-fi, 2.6M examples), and English-Turkish (en-tr, 207,373 examples). We used the newly available pre-processed datasets for the WMT'17 task. Note that our scores may not be directly comparable to other work that performs their own data pre-processing. We learn shared vocabularies of 16,000 subword units using the BPE algorithm BIBREF19 . We use newstest2015 as a validation set, and report BLEU on newstest2016."
+      ],
+      "highlighted_evidence": [
+        "To investigate the trade-off between speed and performance, we compare our technique to standard models with and without attention on a Sequence Copy Task of varying length like in BIBREF14 .",
+        "For this purpose we use 4 large machine translation datasets of WMT'17 on the following language pairs: English-Czech (en-cs, 52M examples), English-German (en-de, 5.9M examples), English-Finish (en-fi, 2.6M examples), and English-Turkish (en-tr, 207,373 examples)."
+      ]
+    }
+  ]
+}

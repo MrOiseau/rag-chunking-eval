@@ -1,0 +1,16 @@
+{
+  "paper_id": "1908.08419",
+  "title": "Active Learning for Chinese Word Segmentation in Medical Text",
+  "questions": [
+    {
+      "question": "How does the active learning model work?",
+      "free_form_answer": "Active learning methods has a learning engine (mainly used for training of classification problems) and the selection engine (which chooses samples that need to be relabeled by annotators from unlabeled data). Then, relabeled samples are added to training set for classifier to re-train, thus continuously improving the accuracy of the classifier. In this paper, CRF-based segmenter and a scoring model are employed as learning engine and selection engine, respectively.",
+      "evidence": [
+        "Active learning methods can generally be described into two parts: a learning engine and a selection engine BIBREF28 . The learning engine is essentially a classifier, which is mainly used for training of classification problems. The selection engine is based on the sampling strategy, which chooses samples that need to be relabeled by annotators from unlabeled data. Then, relabeled samples are added to training set for classifier to re-train, thus continuously improving the accuracy of the classifier. In this paper, a CRF-based segmenter and a scoring model are employed as learning engine and selection engine, respectively."
+      ],
+      "highlighted_evidence": [
+        "Active learning methods can generally be described into two parts: a learning engine and a selection engine BIBREF28 . The learning engine is essentially a classifier, which is mainly used for training of classification problems. The selection engine is based on the sampling strategy, which chooses samples that need to be relabeled by annotators from unlabeled data. Then, relabeled samples are added to training set for classifier to re-train, thus continuously improving the accuracy of the classifier. In this paper, a CRF-based segmenter and a scoring model are employed as learning engine and selection engine, respectively."
+      ]
+    }
+  ]
+}

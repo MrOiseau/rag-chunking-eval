@@ -1,0 +1,30 @@
+{
+  "paper_id": "1606.02601",
+  "title": "A Joint Model for Word Embedding and Word Morphology",
+  "questions": [
+    {
+      "question": "Is there a difference between the model's performance for morphologically impoverished and morphologically complex languages?",
+      "free_form_answer": "They did not report results for English but expect that morphologically complex languages will perform better.",
+      "evidence": [
+        "We only report results for English. However, English is a morphologically impoverished language, with little inflection and relatively few productive patterns of derivation. Our morphology test set reflects this, with over half the words consisting of a simple morpheme, and over 90% having at most 2 morphemes.",
+        "This is unfortunate for our model, as it performs better on words with richer morphology. It gives consistently more accurate morphological analyses for these words compared to standard baselines, and matches word-level models for semantic similarity on rare words with rich morphology. In addition, it seems to learn morphosyntactic features to help solve the syntactic analogy task. Most of all, it is language-agnostic, and easy to port across different languages. We thus expect our model to perform even better for languages with a richer morphology than English, such as Turkish and German."
+      ],
+      "highlighted_evidence": [
+        "We only report results for English.",
+        "We only report results for English. However, English is a morphologically impoverished language, with little inflection and relatively few productive patterns of derivation.",
+        "This is unfortunate for our model, as it performs better on words with richer morphology. It gives consistently more accurate morphological analyses for these words compared to standard baselines, and matches word-level models for semantic similarity on rare words with rich morphology.",
+        "We thus expect our model to perform even better for languages with a richer morphology than English, such as Turkish and German."
+      ]
+    },
+    {
+      "question": "How are the embeddings evaluated in the human judgement comparison?",
+      "free_form_answer": "Using cosine similarity between the embeddings which is then correlated with human judgement",
+      "evidence": [
+        "Next, we tested our model similarity scores against human similarity judgments. For these datasets, human annotators are asked to judge how similar two words are on a fixed scale. Model word vectors are evaluated based on ranking the word pairs according to their cosine similarity, and then measuring the correlation (using Spearman's $\\rho $ ) between model judgments and human judgments BIBREF20 ."
+      ],
+      "highlighted_evidence": [
+        "For these datasets, human annotators are asked to judge how similar two words are on a fixed scale. Model word vectors are evaluated based on ranking the word pairs according to their cosine similarity, and then measuring the correlation (using Spearman's $\\rho $ ) between model judgments and human judgments BIBREF20 ."
+      ]
+    }
+  ]
+}

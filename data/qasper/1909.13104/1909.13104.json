@@ -1,0 +1,48 @@
+{
+  "paper_id": "1909.13104",
+  "title": "Attention-based method for categorizing different types of online harassment language",
+  "questions": [
+    {
+      "question": "What are the different variations of the attention-based approach which are examined?",
+      "free_form_answer": "classic RNN model, avgRNN model, attentionRNN model and multiattention RNN model with and without a projected layer",
+      "evidence": [
+        "We compare eight different models in our experiments. Four of them have a Projected Layer (see Fig. FIGREF2), while the others do not have, and this is the only difference between these two groups of our models. So, we actually include four models in our experiments (having a projected layer or not). Firstly, LastStateRNN is the classic RNN model, where the last state passes through an MLP and then the LR Layer estimates the corresponding probability. In contrast, in the AvgRNN model we consider the average vector of all states that come out of the cells. The AttentionRNN model is the one that it has been presented in BIBREF9. Moreover, we introduce the MultiAttentionRNN model for the harassment language detection, which instead of one attention, it includes four attentions, one for each category."
+      ],
+      "highlighted_evidence": [
+        "We compare eight different models in our experiments. Four of them have a Projected Layer (see Fig. FIGREF2), while the others do not have, and this is the only difference between these two groups of our models. So, we actually include four models in our experiments (having a projected layer or not). Firstly, LastStateRNN is the classic RNN model, where the last state passes through an MLP and then the LR Layer estimates the corresponding probability. In contrast, in the AvgRNN model we consider the average vector of all states that come out of the cells. The AttentionRNN model is the one that it has been presented in BIBREF9. Moreover, we introduce the MultiAttentionRNN model for the harassment language detection, which instead of one attention, it includes four attentions, one for each category."
+      ]
+    },
+    {
+      "question": "What dataset is used for this work?",
+      "free_form_answer": "Twitter dataset provided by the organizers",
+      "evidence": [
+        "In this paper we present our work, which is a part of the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference. The topic of the competition is the classification of different types of harassment and it is divided in two tasks. The first one is the classification of the tweets in harassment and non-harassment categories, while the second one is the classification in specific harassment categories like indirect harassment, physical and sexual harassment as well. We are using the dataset of the competition, which includes text from tweets having the aforementioned categories. Our approach is based on the Recurrent Neural Networks and particularly we are using a deep, classi\ufb01cation specific attention mechanism. Moreover, we present a comparison between different variations of this attention-based approach like multi-attention and single attention models. The next Section includes a short description of the related work, while the third Section includes a description of the dataset. After that, we describe our methodology. Finally, we describe the experiments and we present the results and our conclusion."
+      ],
+      "highlighted_evidence": [
+        "We are using the dataset of the competition, which includes text from tweets having the aforementioned categories. "
+      ]
+    },
+    {
+      "question": "What dataset is used for this work?",
+      "free_form_answer": "The dataset from the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference.",
+      "evidence": [
+        "In this paper we present our work, which is a part of the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference. The topic of the competition is the classification of different types of harassment and it is divided in two tasks. The first one is the classification of the tweets in harassment and non-harassment categories, while the second one is the classification in specific harassment categories like indirect harassment, physical and sexual harassment as well. We are using the dataset of the competition, which includes text from tweets having the aforementioned categories. Our approach is based on the Recurrent Neural Networks and particularly we are using a deep, classi\ufb01cation specific attention mechanism. Moreover, we present a comparison between different variations of this attention-based approach like multi-attention and single attention models. The next Section includes a short description of the related work, while the third Section includes a description of the dataset. After that, we describe our methodology. Finally, we describe the experiments and we present the results and our conclusion."
+      ],
+      "highlighted_evidence": [
+        "In this paper we present our work, which is a part of the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference.",
+        "We are using the dataset of the competition, which includes text from tweets having the aforementioned categories."
+      ]
+    },
+    {
+      "question": "What were the datasets used in this paper?",
+      "free_form_answer": "The dataset from the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference. ",
+      "evidence": [
+        "In this paper we present our work, which is a part of the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference. The topic of the competition is the classification of different types of harassment and it is divided in two tasks. The first one is the classification of the tweets in harassment and non-harassment categories, while the second one is the classification in specific harassment categories like indirect harassment, physical and sexual harassment as well. We are using the dataset of the competition, which includes text from tweets having the aforementioned categories. Our approach is based on the Recurrent Neural Networks and particularly we are using a deep, classi\ufb01cation specific attention mechanism. Moreover, we present a comparison between different variations of this attention-based approach like multi-attention and single attention models. The next Section includes a short description of the related work, while the third Section includes a description of the dataset. After that, we describe our methodology. Finally, we describe the experiments and we present the results and our conclusion."
+      ],
+      "highlighted_evidence": [
+        "In this paper we present our work, which is a part of the SociaL Media And Harassment Competition of the ECML PKDD 2019 Conference. ",
+        " We are using the dataset of the competition, which includes text from tweets having the aforementioned categories."
+      ]
+    }
+  ]
+}

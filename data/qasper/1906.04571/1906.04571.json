@@ -1,0 +1,26 @@
+{
+  "paper_id": "1906.04571",
+  "title": "Counterfactual Data Augmentation for Mitigating Gender Stereotypes in Languages with Rich Morphology",
+  "questions": [
+    {
+      "question": "Why does not the approach from English work on other languages?",
+      "free_form_answer": "Because, unlike other languages, English does not mark grammatical genders",
+      "evidence": [
+        "To date, the NLP community has focused primarily on approaches for detecting and mitigating gender stereotypes in English BIBREF5 , BIBREF6 , BIBREF7 . Yet, gender stereotypes also exist in other languages because they are a function of society, not of grammar. Moreover, because English does not mark grammatical gender, approaches developed for English are not transferable to morphologically rich languages that exhibit gender agreement BIBREF8 . In these languages, the words in a sentence are marked with morphological endings that reflect the grammatical gender of the surrounding nouns. This means that if the gender of one word changes, the others have to be updated to match. As a result, simple heuristics, such as augmenting a corpus with additional sentences in which he and she have been swapped BIBREF9 , will yield ungrammatical sentences. Consider the Spanish phrase el ingeniero experto (the skilled engineer). Replacing ingeniero with ingeniera is insufficient\u2014el must also be replaced with la and experto with experta."
+      ],
+      "highlighted_evidence": [
+        "Moreover, because English does not mark grammatical gender, approaches developed for English are not transferable to morphologically rich languages that exhibit gender agreement BIBREF8 ."
+      ]
+    },
+    {
+      "question": "How do they measure grammaticality?",
+      "free_form_answer": "by calculating log ratio of grammatical phrase over ungrammatical phrase",
+      "evidence": [
+        "Because our approach is specifically intended to yield sentences that are grammatical, we additionally consider the following log ratio (i.e., the grammatical phrase over the ungrammatical phrase): DISPLAYFORM0"
+      ],
+      "highlighted_evidence": [
+        "Because our approach is specifically intended to yield sentences that are grammatical, we additionally consider the following log ratio (i.e., the grammatical phrase over the ungrammatical phrase):"
+      ]
+    }
+  ]
+}
