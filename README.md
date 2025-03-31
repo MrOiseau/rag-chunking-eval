@@ -36,10 +36,44 @@ A framework for evaluating different chunking strategies for Retrieval-Augmented
 - Evaluation metrics (Precision, Recall, F1, MRR@k, R@k)
 - Answer generation with LLMs
 - ChromaDB vector storage
+- Interactive UI for comparing chunking strategies
+
+## Running the Interactive UI
+
+To run the interactive comparison UI:
+
+1. Make sure you have installed all requirements:
+   ```bash
+   pip install streamlit
+   pip install -r master/requirements.txt
+   ```
+
+2. Ensure you have the ChromaDB database files in the `data/chroma_db` directory. These are generated when you run the pipeline as described in the Quick Start section.
+
+3. Set up your environment variables (OpenAI API key and LangSmith API key):
+   ```bash
+   export OPENAI_API_KEY=your_api_key_here
+   export LANGSMITH_API_KEY=your_langsmith_api_key_here
+   export LANGSMITH_PROJECT=rag-chunking-comparison
+   ```
+
+4. Run the Streamlit application:
+   ```bash
+   streamlit run main/frontend_app.py
+   ```
+
+5. Open your browser at the URL shown in the terminal (typically http://localhost:8501)
+
+The UI allows you to:
+- Select two different chunking strategies to compare side by side
+- Filter by specific documents
+- View the original document text
+- Enter queries and see the retrieved chunks and generated answers
+- Compare how different chunking strategies affect retrieval quality
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.11.6
 - GPU support (CUDA or MPS)
 - OpenAI API key (for answer generation and evaluation)
 - Hugging Face account (for dataset access)

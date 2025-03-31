@@ -5,7 +5,6 @@ import streamlit as st
 import uuid
 import concurrent.futures
 import re
-import hashlib
 from typing import List, Dict, Any, Optional, Tuple
 
 # Adding the master/src directory to the Python path
@@ -29,7 +28,7 @@ from langsmith import Client
 from langchain.callbacks import tracing_v2_enabled
 
 # Set Streamlit page configuration at the very beginning
-st.set_page_config(page_title="RAG Chunking Comparison", layout="wide")
+st.set_page_config(page_title="Утицај метода парчања текста на квалитет добављања информација у RAG системима", layout="wide")
 
 # --- Configuration (Replaces backend.config) ---
 # Get ChromaDB path from environment variable or use a default relative path
@@ -68,6 +67,7 @@ available_collections = [
     {"name": "qasper-recursive_character", "description": "Recursive Character"},
     {"name": "qasper-hierarchical", "description": "Hierarchical Chunking"},
     {"name": "qasper-sentence_transformers", "description": "Sentence Transformers Splitter"},
+    {"name": "qasper-semantic_clustering", "description": "Semantic Clustering"},
 ]
 if not available_collections:
     st.error("No collections defined in `available_collections`. Please update the Streamlit script.")
@@ -206,205 +206,35 @@ def initialize_query_components(collection_name: str) -> QueryComponents:
         st.error(f"Initialization error for {collection_descriptions.get(collection_name, collection_name)}: {e}")
         st.stop()
 
-
-# --- Highlighting Helper Functions (Copied from original, assumed correct) ---
-def preprocess_text(text: str) -> list:
-    text = re.sub(r'[\W_]+', ' ', text, flags=re.UNICODE)
-    text = re.sub(r'\s+', ' ', text)
-    text = text.lower().strip()
-    words = text.split()
-    return words
-
-def find_longest_common_substring(text1, text2, min_words=5):
-    text1_norm = re.sub(r'\s+', ' ', text1.lower()).strip()
-    text2_norm = re.sub(r'\s+', ' ', text2.lower()).strip()
-    words1 = text1_norm.split()
-    words2 = text2_norm.split()
-    if not words1 or not words2: return ""
-    dp = [[0 for _ in range(len(words2) + 1)] for _ in range(len(words1) + 1)]
-    max_length = 0
-    end_pos = 0
-    for i in range(1, len(words1) + 1):
-        for j in range(1, len(words2) + 1):
-            if words1[i-1] == words2[j-1]:
-                dp[i][j] = dp[i-1][j-1] + 1
-                if dp[i][j] > max_length:
-                    max_length = dp[i][j]
-                    end_pos = i
-    if max_length >= min_words:
-        start_pos = end_pos - max_length
-        # Find corresponding original text position more robustly
-        orig_words1 = text1.split() # Split preserving original casing/spacing somewhat
-        if start_pos < len(orig_words1) and end_pos <= len(orig_words1):
-             # Simple join, might not be perfect with complex spacing/punctuation
-             return ' '.join(orig_words1[start_pos:end_pos])
-    return ""
-
-
-def find_common_sequences(text1, text2, min_words=5):
-    if not text1 or not text2: return []
-    # Prioritize longest common substring first
-    longest = find_longest_common_substring(text1, text2, min_words)
-    if longest:
-        # print(f"DEBUG: Found longest common: '{longest[:50]}...'")
-        return [longest]
-
-    # Fallback (less efficient, find any common sequence) - consider removing if LCS is enough
-    text1_norm = re.sub(r'\s+', ' ', text1.lower()).strip()
-    text2_norm = re.sub(r'\s+', ' ', text2.lower()).strip()
-    words1 = text1_norm.split()
-    if len(words1) < min_words: return []
-
-    common_sequences = []
-    text2_word_set = set(text2_norm.split()) # Quick check optimization
-
-    for i in range(len(words1) - min_words + 1):
-        current_sequence_words = words1[i : i + min_words]
-        # Optimization: check if first word exists in text2
-        if current_sequence_words[0] not in text2_word_set:
-            continue
-
-        sequence_str_norm = ' '.join(current_sequence_words)
-
-        if sequence_str_norm in text2_norm:
-             # Attempt to extend match (simple greedy extension)
-            j = i + min_words
-            extended_sequence_norm = sequence_str_norm
-            while j < len(words1):
-                next_word = words1[j]
-                potential_extended_norm = extended_sequence_norm + ' ' + next_word
-                if potential_extended_norm in text2_norm:
-                    extended_sequence_norm = potential_extended_norm
-                    j += 1
-                else:
-                    break
-            # Find original text span for the final extended sequence
-            # This part is tricky to get exactly right with original formatting
-            # Using the normalized version for now
-            # TODO: Improve original text extraction for this fallback case
-            common_sequences.append(extended_sequence_norm)
-
-
-    unique_sequences = list(set(common_sequences))
-    unique_sequences.sort(key=len, reverse=True)
-    # print(f"DEBUG: Fallback found {len(unique_sequences)} common sequences.")
-    return unique_sequences
-
-def generate_consistent_color(text):
-    hash_value = int(hashlib.md5(text.encode()).hexdigest(), 16)
-    r = (hash_value & 0xFF0000) >> 16
-    g = (hash_value & 0x00FF00) >> 8
-    b = hash_value & 0x0000FF
-    # Make colors lighter pastel-like
-    r = (r + 255) // 2
-    g = (g + 255) // 2
-    b = (b + 255) // 2
-    # Ensure minimum brightness
-    r = max(180, r)
-    g = max(180, g)
-    b = max(180, b)
-    return f"#{r:02x}{g:02x}{b:02x}"
-
-
-def highlight_common_sequences(text, common_sequences, color_map):
-    if not common_sequences or not text:
-        return text
-
-    intervals = []
-    lower_text = text.lower()
-
-    # Sort sequences by length DESC to find longest matches first
-    for seq in sorted(common_sequences, key=lambda s: -len(s)):
-        seq_lower = seq.lower().strip()
-        if not seq_lower: continue
-
-        start = 0
-        while True:
-            idx = lower_text.find(seq_lower, start)
-            if idx == -1: break
-            end = idx + len(seq_lower)
-
-            # Check for overlap with already added intervals
-            is_overlapping = False
-            for existing_start, existing_end, _ in intervals:
-                # Check if the new interval is completely within an existing one
-                if idx >= existing_start and end <= existing_end:
-                    is_overlapping = True
-                    break
-                # Check for partial overlaps (more complex, simplified here)
-                if not (end <= existing_start or idx >= existing_end):
-                     # Basic overlap check: if they touch or intersect
-                     # We prioritize the longer sequence already added (due to sorting)
-                     is_overlapping = True
-                     break # Don't add this shorter/later sequence if it overlaps
-
-            if not is_overlapping:
-                intervals.append((idx, end, color_map[seq]))
-                # Move start significantly to avoid re-matching subsets within the found match
-                start = end # Start next search after the current match ends
-            else:
-                 # If overlapping, still advance start to avoid infinite loops on partial overlaps
-                 start = idx + 1
-
-
-    intervals.sort(key=lambda x: x[0])
-
-    # Filter out intervals fully contained within others (can happen with adjusted logic)
-    filtered_intervals = []
-    for i, (start1, end1, color1) in enumerate(intervals):
-        is_contained = False
-        for j, (start2, end2, color2) in enumerate(intervals):
-            if i != j and start1 >= start2 and end1 <= end2:
-                is_contained = True
-                break
-        if not is_contained:
-            filtered_intervals.append((start1, end1, color1))
-
-    # Rebuild text with highlights
-    highlighted_text = ""
-    last_index = 0
-    for start, end, color in filtered_intervals: # Use filtered intervals
-        # Ensure intervals are sequential and valid
-        if start >= last_index:
-             highlighted_text += text[last_index:start]
-             highlighted_text += f'<span style="background-color: {color}; display: inline; border-radius: 3px; padding: 1px 2px;">{text[start:end]}</span>'
-             last_index = end
-        # else: print(f"WARN: Skipping overlapping or out-of-order interval: ({start}-{end}) vs last_index {last_index}")
-
-
-    highlighted_text += text[last_index:]
-    return highlighted_text
-# --- End Highlighting Helpers ---
-
 # --- Streamlit UI Setup ---
-st.title("📊 RAG Chunking Strategy Comparison")
-st.markdown(f"Comparing results from different vector stores in **{DB_DIR}**")
+st.title("📊 Поређење изабраних стратегија парчања текста у RAG системима")
+st.markdown(f"Поређење резултата из различитих векторских база")  # у **{DB_DIR}**")
 
 # Sidebar for Filters and Settings
-st.sidebar.title("Settings & Filters")
+st.sidebar.title("Подешавања и филтери")
 
 # Collection Selection for two databases
-st.sidebar.subheader("Select Databases to Compare")
-st.sidebar.markdown("**Database 1**")
+st.sidebar.subheader("Изаберите базе за поређење")
+st.sidebar.markdown("**База 1**")
 selected_collection_1 = st.sidebar.selectbox(
-    "Choose Chunking Strategy 1:",
+    "Изаберите стратегију парчања текста 1:",
     options=[c["name"] for c in available_collections],
     format_func=lambda x: f"{collection_descriptions.get(x, x)}",
-    help="Select the first vector database collection (representing a chunking strategy).",
+    help="Изаберите прву колекцију векторске базе (која представља стратегију парчања текста).",
     key="db1"
 )
 
-st.sidebar.markdown("**Database 2**")
+st.sidebar.markdown("**База 2**")
 # Set default for second box to be different if possible
 default_index_2 = 1 if len(available_collections) > 1 and available_collections[1]["name"] != selected_collection_1 else 0
 if selected_collection_1 == available_collections[default_index_2]["name"] and len(available_collections) > 2:
     default_index_2 = 2 # Try the third one
 
 selected_collection_2 = st.sidebar.selectbox(
-    "Choose Chunking Strategy 2:",
+    "Изаберите стратегију парчања текста 2:",
     options=[c["name"] for c in available_collections],
     format_func=lambda x: f"{collection_descriptions.get(x, x)}",
-    help="Select the second vector database collection for comparison.",
+    help="Изаберите другу колекцију векторске базе за поређење.",
     key="db2",
     index=default_index_2
 )
@@ -420,13 +250,13 @@ for key in ["current_collection_1", "current_collection_2"]:
 
 # Initialize Query Pipelines (Components) for both selected collections
 if "query_components_1" not in st.session_state or st.session_state.get("current_collection_1") != selected_collection_1:
-    with st.spinner(f"Loading DB 1: {collection_descriptions.get(selected_collection_1, selected_collection_1)}..."):
+    with st.spinner(f"Учитавање базе 1: {collection_descriptions.get(selected_collection_1, selected_collection_1)}..."):
         st.session_state["query_components_1"] = initialize_query_components(selected_collection_1)
         st.session_state["current_collection_1"] = selected_collection_1
         # st.success(f"Loaded DB 1: {collection_descriptions.get(selected_collection_1, 'Unknown')}")
 
 if "query_components_2" not in st.session_state or st.session_state.get("current_collection_2") != selected_collection_2:
-    with st.spinner(f"Loading DB 2: {collection_descriptions.get(selected_collection_2, selected_collection_2)}..."):
+    with st.spinner(f"Учитавање базе 2: {collection_descriptions.get(selected_collection_2, selected_collection_2)}..."):
         st.session_state["query_components_2"] = initialize_query_components(selected_collection_2)
         st.session_state["current_collection_2"] = selected_collection_2
         # st.success(f"Loaded DB 2: {collection_descriptions.get(selected_collection_2, 'Unknown')}")
@@ -519,30 +349,50 @@ if not unique_titles and query_components_2: # Fallback if DB1 failed or had no 
      unique_titles = query_components_2.get_unique_titles()
 
 # Title Filter - Changed to single select instead of multiselect
-st.sidebar.subheader("Document Filters")
-st.sidebar.info("Select a single document below to focus your query on just that paper.")
+st.sidebar.subheader("Филтер за докумената")
+st.sidebar.info("Изаберите један документ на којем ће се извршити упит.")
 
 # Extract just the document ID from the full title for cleaner display
 def format_title(title):
     if title == "":
-        return "All Documents"
+        return "Сви документи"
     # Try to extract just the document ID (e.g., "1605.04278" from longer paths)
     match = re.search(r'(\d{4}\.\d{5})', title)
     if match:
-        return f"Paper {match.group(1)}"
+        return f"Рад {match.group(1)}"
     return title
 
 selected_title = st.sidebar.selectbox(
-    "Filter by Document:",
+    "Филтрирај по документу:",
     options=[""] + unique_titles,  # Add empty option for no filter
     format_func=format_title,
-    help="Select a single document to restrict the search to only that document.",
+    help="Изаберите један документ да ограничите претрагу само на тај документ.",
 )
+
+# Display original document if one is selected
+if selected_title:
+    st.subheader("📄 Оригинални документ")
+    try:
+        # Extract paper ID using regex
+        paper_id_match = re.search(r'(\d{4}\.\d{5})', selected_title)
+        if paper_id_match:
+            paper_id = paper_id_match.group(1)
+            # Try to find and read the original document
+            doc_path = f"data/qasper/{paper_id}/{paper_id}.md"
+            try:
+                with open(doc_path, "r") as f:
+                    original_text = f.read()
+                with st.expander(f"Оригинални текст - Рад {paper_id}", expanded=True):
+                    st.markdown(original_text)
+            except FileNotFoundError:
+                st.info(f"Оригинални документ није пронађен на путањи {doc_path}")
+    except Exception as e:
+        st.error(f"Грешка при учитавању оригиналног документа: {e}")
 
 # --- Query Input Form ---
 with st.form(key="query_form"):
-    user_input = st.text_input("Enter your query:", placeholder="e.g., What challenges were faced during the COVID-19 response?")
-    submit_button = st.form_submit_button(label="Search & Compare")
+    user_input = st.text_input("Унесите питање на енглеском:", placeholder="нпр. What word level and character level model baselines are used?")
+    submit_button = st.form_submit_button(label="Претражи и упореди")
 
 # Initialize state fields for results
 for field in ["run_id_1", "run_id_2", "last_result_1", "last_result_2", "last_user_input", "trace_urls"]:
@@ -693,7 +543,7 @@ Answer:"""
 
 # --- Run Query on Submit ---
 if submit_button and user_input.strip():
-    with st.spinner("Processing query and comparing results..."):
+    with st.spinner("Обрада упита и поређење резултата..."):
         try:
             metadata_filter = {}
             paper_id = None
@@ -763,22 +613,17 @@ if st.session_state.get("results_available"):
     selected_collections = {1: st.session_state["current_collection_1"], 2: st.session_state["current_collection_2"]}
     query_components = {1: st.session_state["query_components_1"], 2: st.session_state["query_components_2"]}
 
-
-    # No highlighting processing needed when filtering by a single document
-    all_common_sequences = []
-    color_map = {}
-
     # --- Display Loop for Both Columns ---
     for db_key, col, result_data in [(1, col1, results[1]), (2, col2, results[2])]:
         with col:
             collection_name = selected_collections[db_key]
-            st.header(f"DB {db_key}: {collection_descriptions.get(collection_name, collection_name)}")
+            st.header(f"База {db_key}: {collection_descriptions.get(collection_name, collection_name)}")
 
-            summary_tab, documents_tab, system_tab = st.tabs(["Summary", "Retrieved Docs", "System Info"])
+            summary_tab, documents_tab, system_tab = st.tabs(["Генерисани одговор", "Пронађени чанкови", "Системске информације"])
 
             with summary_tab:
-                st.subheader("💬 LLM Answer/Summary")
-                st.write(result_data.get("summary", "No summary available."))
+                st.subheader("💬 LLM генерисани одговор (на енг.)")
+                st.write(result_data.get("summary", "Генерисани одговор није доступан."))
                 # Feedback requires run_id associated with the summary generation step
                 # This needs adjustment if summary generation isn't part of the main traced run.
                 # run_id = st.session_state.get(f"run_id_{db_key}")
@@ -787,7 +632,7 @@ if st.session_state.get("results_available"):
                 #    pass
 
             with documents_tab:
-                st.subheader(f"📄 Retrieved Documents (Top {len(result_data.get('documents_for_display', []))})")
+                st.subheader(f"📄 Пронађени чанкови (Најбољих {len(result_data.get('documents_for_display', []))})")
                 retrieved_docs = result_data.get('documents_for_display', [])
                 if retrieved_docs:
                     for doc_info in retrieved_docs:
@@ -802,75 +647,82 @@ if st.session_state.get("results_available"):
                         meta_str = ", ".join([f"`{k}`: {v}" for k, v in meta_display.items() if v is not None])
 
 
-                        expander_title = f"Doc {doc_num}: {doc_title} (Score: {doc_score:.4f})"
+                        expander_title = f"Документ {doc_num}: {doc_title} (Оцена: {doc_score:.4f})"
                         with st.expander(expander_title):
-                             st.markdown(f"**Metadata:** {meta_str}", unsafe_allow_html=True)
-                             st.markdown("**Content:**")
-                             # Display content without highlighting
+                             st.markdown(f"**Метаподаци:** {meta_str}", unsafe_allow_html=True)
+                             st.markdown("**Садржај:**")
                              st.markdown(doc_content)
 
                 else:
-                    st.write("No documents retrieved.")
+                    st.write("Нема пронађених чанкова.")
 
             with system_tab:
-                st.subheader("⚙️ System Configuration")
+                st.subheader("⚙️ Конфигурација система")
                 components = query_components[db_key]
                 embed_model_info = components.embedding_model.__class__.__name__
                 if hasattr(components.embedding_model, 'model_name'):
                      embed_model_info += f" ({components.embedding_model.model_name})"
 
                 system_info = {
-                    "Collection": collection_name,
-                    "Chunking Method": collection_descriptions.get(collection_name, "Unknown"),
-                    "Embedding Model": embed_model_info,
-                    "Chat Model": components.llm.model_name if hasattr(components.llm, 'model_name') else components.llm.__class__.__name__,
-                    "Chat Temperature": components.llm.temperature if hasattr(components.llm, 'temperature') else "N/A",
-                    "Results K": SEARCH_RESULTS_NUM,
-                    "DB Directory": DB_DIR,
+                    "Колекција": collection_name,
+                    "Метод парчања текста": collection_descriptions.get(collection_name, "Непознато"),
+                    "Модел ембединга": embed_model_info,
+                    "Модел за генерисање одговора": components.llm.model_name if hasattr(components.llm, 'model_name') else components.llm.__class__.__name__,
+                    "Температура модела за генерисање одговора": components.llm.temperature if hasattr(components.llm, 'temperature') else "Н/А",
+                    "Број резултата": SEARCH_RESULTS_NUM,
+                    "Директоријум базе": DB_DIR,
                 }
                 st.json(system_info)
 
                 # Display LangSmith trace link
                 trace_url = trace_urls.get(db_key)
                 if trace_url:
-                    st.markdown(f"[View LangSmith Trace]({trace_url})")
+                    st.markdown(f"[Погледај траг у LangSmith-у]({trace_url})")
                 else:
-                     st.markdown("LangSmith trace URL not available.")
-
-
-    # No highlighting explanation needed
+                     st.markdown("LangSmith URL траг није доступан.")
 
     # --- Chunking Methods Comparison Table ---
     st.markdown("---")
-    with st.expander("📊 Chunking Methods Overview"):
-         # Build markdown table from available_collections
-        table_md = "| Collection Name | Chunking Method Description |\n"
-        table_md += "|-----------------|-----------------------------|\n"
+    with st.expander("📊 Преглед метода парчања текста"):
+         # Build markdown table from available_collections with descriptions
+        table_md = "| Назив колекције | Назив методе парчања текста | Опис методе парчања текста |\n"
+        table_md += "|-----------------|----------------------------|-----------------------------|\n"
+        
+        # Define detailed descriptions for each method
+        descriptions = {
+            "qasper-recursive_character": "Користи рекурзивно парчање текста на основу фиксних сепаратора са дефинисаном величином и преклапањем, али не узима у обзир семантичку структуру.",
+            "qasper-hierarchical": "Парчи текст тако да сваки сегмент почиње са насловом или поднасловом, задржавајући оригиналну хијерархијску структуру документа.",
+            "qasper-semantic_clustering": "Групише реченице у кластерима користећи ембединг моделе и K-means алгоритам, уз динамичко одређивање броја кластера и узимање у обзир позиције реченица.",
+            "qasper-sentence_transformers": "Динамички спаја реченице у кохерентне chunk-ове користећи косинусну сличност ембединг вектора и технику клизећег прозора."
+        }
+        
+        # Add each collection to the table with its description
         for coll in available_collections:
-            table_md += f"| `{coll['name']}` | {coll['description']} |\n"
+            description = descriptions.get(coll["name"], "Нема доступног описа.")
+            table_md += f"| `{coll['name']}` | {coll['description']} | {description} |\n"
+        
         st.markdown(table_md)
-        # Add more detailed explanations if desired
 
 
 elif submit_button:
     # Handle case where submit was pressed but results are not available (e.g., empty query)
     if not user_input.strip():
-       st.warning("Please enter a query.")
+       st.warning("Молимо вас да унесете питање.")
     # Error handled during query execution
 
 # --- Initial Info Message ---
 if not st.session_state.get("results_available"): # Show if no results yet
     st.info("""
-    **Welcome to the RAG Chunking Comparison Tool!**
+    **Добродошли у алат за поређење RAG стратегија парчања текста!**
 
-    1.  Select two different **Chunking Strategies** (Vector Databases) from the sidebar.
-    2.  Optionally, filter by specific **Source Document Titles**.
-    3.  Enter your **Query** in the text box above.
-    4.  Click **Search & Compare**.
+    1.  Изаберите две различите **стратегије парчања текста** (векторске базе) из бочне падајуће листе.
+    2.  Филтрирајте по одређеном **наслову документа**.
+    3.  Унесите **питање** у поље за текст изнад.
+    4.  Кликните на **Претражи и упореди**.
 
-    The results will show summaries and retrieved documents side-by-side for both chunking strategies.
+    Резултати ће приказати LLM генерисани одговор и пронађене чанкове један испод другог за обе изабране стратегије парчања текста.
     """)
 
 # --- Footer ---
 st.markdown("---")
-st.markdown("Developed for academic research on chunking methods in RAG systems. Uses Streamlit, LangChain, ChromaDB, and selected LLMs/Embedding models.")
+st.markdown("Развијено за академско истраживање метода парчања текста у RAG системима. Користи Streamlit, LangChain, ChromaDB и изабране LLM/Embedding моделе.")

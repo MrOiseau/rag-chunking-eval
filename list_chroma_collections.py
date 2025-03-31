@@ -1,13 +1,8 @@
 import chromadb
 import os
 
-# --- IMPORTANT: Set this to your ChromaDB persist directory ---
-# Use the path from your Streamlit app logs if unsure
+# Set this to your ChromaDB persist directory
 persist_directory = "/Users/bijanic/Documents/master/master_code_3/rag_chunking_eval/data/chroma_db"
-# Or get it from environment variable like in your app:
-# persist_directory = os.getenv("DB_DIR", "data/chroma_db")
-# persist_directory = os.path.abspath(persist_directory) # Ensure absolute path
-
 print(f"Looking for ChromaDB collections in: {persist_directory}")
 
 try:
